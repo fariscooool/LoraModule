@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "J-Link SWD STM32L031 (Flash&Debug)",
+      "type": "cortex-debug",
+      "request": "launch",
+
+      /* ---------- 目标 / 固件 ---------- */
+      "device": "STM32L031G6",
+      "interface": "swd",
+      "executable": "${workspaceFolder}/ABCPhase_LowPowerControlModeule.elf",
+      "runToEntryPoint": "main",
+
+      /* ---------- 调试后端: J-Link GDB Server ---------- */
+      "servertype": "jlink",
+      "serverpath": "",   // 留空自动找;若找不到,填 JLinkGDBServerCL 的完整路径
+      "serverArgs": [],
+
+      /* ---------- GNU 工具链 ---------- */
+      // 指向你机器上的 arm-none-eabi 工具链 bin 目录(内含 arm-none-eabi-gdb.exe)
+      "armToolchainPath": "D:/UserDev/UserTOOL/arm-gnu-toolchain/bin",
+      "gdbPath": "",      // 留空则用 armToolchainPath 下的 arm-none-eabi-gdb
+
+      /* ---------- 调试行为 ---------- */
+      // 芯片可能睡在低功耗里;不加 connectUnderReset(板子没有 NRST 到 J-Link),
+      // 用普通连接 + 固件里 3 秒启动窗口即可连上。
+      "connectUnderReset": false,
+      "preLaunchCommands": [],
+      "postLaunchCommands": [],
+
+      /* ---------- 外设寄存器视图(可选) ---------- */
+      // 想在看“外设寄存器”时显示寄存器名,可把 STM32L0 的 .svd 放进来,
+      // 例如: "svdFile": "${workspaceFolder}/STM32L031.svd",
+      "svdFile": "",
+
+      /* ---------- 日志(排查连接问题时改为 raw) ---------- */
+    //   "showDevDebugOutput": "parsed",
+      "logging": {
+        "engineLaunch": true,
+        "engineOutput": true,
+        "launch": true
+      }
+    }
+  ]
+}

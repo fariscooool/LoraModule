@@ -1,0 +1,21 @@
+CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj: \
+ D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\sysmem.c \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/errno.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/errno.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/reent.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/_ansi.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/newlib.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/_newlib_version.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/config.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/machine/ieeefp.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/features.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/lib/gcc/arm-none-eabi/13.3.1/include/stddef.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/cdefs.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/machine/_default_types.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/_types.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/machine/_types.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/lock.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/lib/gcc/arm-none-eabi/13.3.1/include/stdint.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/stdint.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/_intsup.h \
+ D:/UserDev/UserTOOL/arm-gnu-toolchain/arm-none-eabi/include/sys/_stdint.h

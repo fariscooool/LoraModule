@@ -1,0 +1,6 @@
+{
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json",
+  "files.associations": {
+    "*.h": "c"
+  }
+}
