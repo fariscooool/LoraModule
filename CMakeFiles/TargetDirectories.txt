@@ -1,5 +1,5 @@
-D:/UserDev/UserPRJ/ABCPhase_LowPowerControlModeule/CMakeFiles/ABCPhase_LowPowerControlModeule.dir
-D:/UserDev/UserPRJ/ABCPhase_LowPowerControlModeule/CMakeFiles/edit_cache.dir
-D:/UserDev/UserPRJ/ABCPhase_LowPowerControlModeule/CMakeFiles/rebuild_cache.dir
-D:/UserDev/UserPRJ/ABCPhase_LowPowerControlModeule/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
-D:/UserDev/UserPRJ/ABCPhase_LowPowerControlModeule/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
+D:/development/LORA/Firmware/LoraModule/CMakeFiles/ABCPhase_LowPowerControlModeule.dir
+D:/development/LORA/Firmware/LoraModule/CMakeFiles/edit_cache.dir
+D:/development/LORA/Firmware/LoraModule/CMakeFiles/rebuild_cache.dir
+D:/development/LORA/Firmware/LoraModule/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+D:/development/LORA/Firmware/LoraModule/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

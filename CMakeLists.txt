@@ -49,8 +49,8 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # 应用层
     App/app_main.c
-    App/app_cmd.c
     App/app_lora.c
+    App/app_lora_procotol.c
 
     # 驱动层(Bsp)
     Bsp/bsp_dbg_uart.c

@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule
+CMAKE_SOURCE_DIR = D:\development\LORA\Firmware\LoraModule
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule
+CMAKE_BINARY_DIR = D:\development\LORA\Firmware\LoraModule
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ABCPhase_LowPowerControlModeule.dir/depend.make
@@ -74,511 +74,511 @@ CMakeFiles/ABCPhase_LowPowerControlModeule.dir/codegen:
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj: App/app_main.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_main.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_main.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_main.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_main.c.obj -c D:\development\LORA\Firmware\LoraModule\App\app_main.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_main.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_main.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\App\app_main.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_main.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_main.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_main.c.s
-
-CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
-CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.obj: App/app_cmd.c
-CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_cmd.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_cmd.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_cmd.c
-
-CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_cmd.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_cmd.c.i
-
-CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_cmd.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_cmd.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\App\app_main.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_main.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj: App/app_lora.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_lora.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora.c.obj -c D:\development\LORA\Firmware\LoraModule\App\app_lora.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_lora.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\App\app_lora.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\App\app_lora.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\App\app_lora.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora.c.s
+
+CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
+CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj: App/app_lora_procotol.c
+CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora_procotol.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora_procotol.c.obj -c D:\development\LORA\Firmware\LoraModule\App\app_lora_procotol.c
+
+CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.i"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\App\app_lora_procotol.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora_procotol.c.i
+
+CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.s"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\App\app_lora_procotol.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\App\app_lora_procotol.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj: Bsp/bsp_dbg_uart.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_dbg_uart.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_dbg_uart.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_dbg_uart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_dbg_uart.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_dbg_uart.c.obj -c D:\development\LORA\Firmware\LoraModule\Bsp\bsp_dbg_uart.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_dbg_uart.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_dbg_uart.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Bsp\bsp_dbg_uart.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_dbg_uart.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_dbg_uart.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_dbg_uart.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Bsp\bsp_dbg_uart.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_dbg_uart.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj: Bsp/bsp_lora_uart.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_lora_uart.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_lora_uart.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_lora_uart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_lora_uart.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_lora_uart.c.obj -c D:\development\LORA\Firmware\LoraModule\Bsp\bsp_lora_uart.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_lora_uart.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_lora_uart.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Bsp\bsp_lora_uart.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_lora_uart.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_lora_uart.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_lora_uart.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Bsp\bsp_lora_uart.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_lora_uart.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj: Bsp/bsp_gpio.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_gpio.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_gpio.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_gpio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_gpio.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_gpio.c.obj -c D:\development\LORA\Firmware\LoraModule\Bsp\bsp_gpio.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_gpio.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_gpio.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Bsp\bsp_gpio.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_gpio.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_gpio.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_gpio.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Bsp\bsp_gpio.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_gpio.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj: Bsp/bsp_system.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_system.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_system.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_system.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_system.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_system.c.obj -c D:\development\LORA\Firmware\LoraModule\Bsp\bsp_system.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_system.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_system.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Bsp\bsp_system.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_system.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Bsp\bsp_system.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_system.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Bsp\bsp_system.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Bsp\bsp_system.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj: Core/Src/main.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\main.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\main.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\main.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\main.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\main.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\main.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\main.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\main.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\main.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\main.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\main.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\main.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\main.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj: Core/Src/gpio.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\gpio.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\gpio.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\gpio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\gpio.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\gpio.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\gpio.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\gpio.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\gpio.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\gpio.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\gpio.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\gpio.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\gpio.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\gpio.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\gpio.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj: Core/Src/dma.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\dma.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\dma.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\dma.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\dma.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\dma.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\dma.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\dma.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\dma.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\dma.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\dma.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\dma.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\dma.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\dma.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\dma.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.obj: Core/Src/iwdg.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\iwdg.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\iwdg.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\iwdg.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\iwdg.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\iwdg.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\iwdg.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\iwdg.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\iwdg.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\iwdg.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\iwdg.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/iwdg.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\iwdg.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\iwdg.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\iwdg.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\iwdg.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj: Core/Src/usart.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\usart.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\usart.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\usart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\usart.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\usart.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\usart.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\usart.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\usart.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\usart.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\usart.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\usart.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\usart.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\usart.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\usart.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj: Core/Src/stm32l0xx_it.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_it.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_it.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\stm32l0xx_it.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_it.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_it.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\stm32l0xx_it.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\stm32l0xx_it.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_it.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\stm32l0xx_it.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_it.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\stm32l0xx_it.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_it.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\stm32l0xx_it.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_it.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj: Core/Src/stm32l0xx_hal_msp.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_hal_msp.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_hal_msp.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\stm32l0xx_hal_msp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_hal_msp.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_hal_msp.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\stm32l0xx_hal_msp.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\stm32l0xx_hal_msp.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_hal_msp.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\stm32l0xx_hal_msp.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_hal_msp.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\stm32l0xx_hal_msp.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_hal_msp.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\stm32l0xx_hal_msp.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\stm32l0xx_hal_msp.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_iwdg.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_lptim.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_lptim.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_i2c_ex.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_rcc_ex.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ramfunc.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_flash_ex.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_gpio.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_dma.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_pwr_ex.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_cortex.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_exti.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_exti.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj: Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c.obj -c D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Drivers\STM32L0xx_HAL_Driver\Src\stm32l0xx_hal_uart_ex.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj: Core/Src/system_stm32l0xx.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\system_stm32l0xx.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\system_stm32l0xx.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\system_stm32l0xx.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\system_stm32l0xx.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\system_stm32l0xx.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\system_stm32l0xx.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\system_stm32l0xx.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\system_stm32l0xx.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\system_stm32l0xx.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\system_stm32l0xx.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\system_stm32l0xx.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\system_stm32l0xx.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\system_stm32l0xx.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\system_stm32l0xx.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj: Core/Src/sysmem.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\sysmem.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\sysmem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\sysmem.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\sysmem.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\sysmem.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\sysmem.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\sysmem.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\sysmem.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\sysmem.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\sysmem.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\sysmem.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\sysmem.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.obj: Core/Src/syscalls.c
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\syscalls.c.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\syscalls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\syscalls.c.obj -c D:\development\LORA\Firmware\LoraModule\Core\Src\syscalls.c
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\syscalls.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\syscalls.c.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\development\LORA\Firmware\LoraModule\Core\Src\syscalls.c > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\syscalls.c.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/syscalls.c.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\Core\Src\syscalls.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\syscalls.c.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\development\LORA\Firmware\LoraModule\Core\Src\syscalls.c -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\Core\Src\syscalls.c.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/flags.make
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj: startup_stm32l031xx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\startup_stm32l031xx.s.obj -c D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\startup_stm32l031xx.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj"
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\startup_stm32l031xx.s.obj -c D:\development\LORA\Firmware\LoraModule\startup_stm32l031xx.s
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.i"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\startup_stm32l031xx.s > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\startup_stm32l031xx.s.i
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E D:\development\LORA\Firmware\LoraModule\startup_stm32l031xx.s > CMakeFiles\ABCPhase_LowPowerControlModeule.dir\startup_stm32l031xx.s.i
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.s"
-	D:\UserDev\UserTOOL\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\startup_stm32l031xx.s -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\startup_stm32l031xx.s.s
+	D:\tools\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S D:\development\LORA\Firmware\LoraModule\startup_stm32l031xx.s -o CMakeFiles\ABCPhase_LowPowerControlModeule.dir\startup_stm32l031xx.s.s
 
 # Object files for target ABCPhase_LowPowerControlModeule
 ABCPhase_LowPowerControlModeule_OBJECTS = \
 "CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj" \
-"CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.obj" \
 "CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj" \
+"CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj" \
 "CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj" \
 "CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj" \
 "CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj" \
@@ -617,8 +617,8 @@ ABCPhase_LowPowerControlModeule_OBJECTS = \
 ABCPhase_LowPowerControlModeule_EXTERNAL_OBJECTS =
 
 ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
-ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.obj
 ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
+ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
 ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
 ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
 ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
@@ -654,7 +654,7 @@ ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.
 ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
 ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/build.make
 ABCPhase_LowPowerControlModeule.elf: CMakeFiles/ABCPhase_LowPowerControlModeule.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking C executable ABCPhase_LowPowerControlModeule.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\development\LORA\Firmware\LoraModule\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking C executable ABCPhase_LowPowerControlModeule.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ABCPhase_LowPowerControlModeule.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -666,6 +666,6 @@ CMakeFiles/ABCPhase_LowPowerControlModeule.dir/clean:
 .PHONY : CMakeFiles/ABCPhase_LowPowerControlModeule.dir/clean
 
 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles\ABCPhase_LowPowerControlModeule.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\development\LORA\Firmware\LoraModule D:\development\LORA\Firmware\LoraModule D:\development\LORA\Firmware\LoraModule D:\development\LORA\Firmware\LoraModule D:\development\LORA\Firmware\LoraModule\CMakeFiles\ABCPhase_LowPowerControlModeule.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ABCPhase_LowPowerControlModeule.dir/depend
 

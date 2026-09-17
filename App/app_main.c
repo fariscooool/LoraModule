@@ -18,43 +18,13 @@
 #include "app_config.h"
 
 #include "app_main.h"
-#include "app_cmd.h"
+#include "app_lora_procotol.h"
 
 #include "bsp_dbg_uart.h"
 #include "bsp_gpio.h"
 #include "bsp_lora_uart.h"
 #include "bsp_system.h"
 
-/*==============================================================================
- * 上报帧结构(协议宏定义见 app_config.h 的“上报帧协议”一节)
- *   [0] [1] 帧头    FRM_HEAD0 FRM_HEAD1
- *   [2]      类型    FRM_TYPE_REPORT
- *   [3]      通道    0/1/2
- *   [4]      参数    该通道运行时参数(默认=app_config.h 的 APP_SIG_CHx_PARAM)
- *   [5]      校验    前 5 字节累加和(取低 8 位)
- *   [6]      帧尾    FRM_TAIL
- * 总长 7 字节。
- *============================================================================*/
-
-typedef struct
-{
-    uint8_t head0;
-    uint8_t head1;
-    uint8_t type;
-    uint8_t ch;
-    uint8_t param;
-    uint8_t sum;
-    uint8_t tail;
-} sig_report_frame_t;                     /* 长度 7 */
-
-/* 通道 -> 运行时“参数”表(默认取自 app_config.h 的宏;
- * 运行中可由调试串口命令 set 修改,重启恢复默认) */
-static uint8_t g_ch_param[BSP_SIG_CH_MAX] =
-{
-    APP_SIG_CH0_PARAM,
-    APP_SIG_CH1_PARAM,
-    APP_SIG_CH2_PARAM,
-};
 
 /*==============================================================================
  * 内部函数
@@ -80,101 +50,6 @@ static uint8_t app_sig_debounce_confirm(bsp_sig_ch_t ch)
     return (cnt >= (APP_SIG_DEBOUNCE_MS - 2U)) ? 1U : 0U;
 }
 
-/**
- * @brief 组上报帧并通过 UART1(LPUART1) 下发给 LoRa 模块
- * @note  对外导出:既供信号检测调用,也供调试串口命令手动触发
- */
-void app_sig_report(bsp_sig_ch_t ch)
-{
-    sig_report_frame_t frm;
-    uint8_t i;
-
-    if (ch >= BSP_SIG_CH_MAX)
-    {
-        return;
-    }
-
-    frm.head0 = FRM_HEAD0;
-    frm.head1 = FRM_HEAD1;
-    frm.type  = FRM_TYPE_REPORT;
-    frm.ch    = (uint8_t)ch;
-    frm.param = g_ch_param[ch];
-
-    /* 累加和 = 前 5 字节低 8 位 */
-    frm.sum = 0U;
-    {
-        const uint8_t *p = (const uint8_t *)&frm;
-        for (i = 0U; i < 5U; i++)
-        {
-            frm.sum = (uint8_t)(frm.sum + p[i]);
-        }
-    }
-    frm.tail = FRM_TAIL;
-
-    dbg_printf("[APP] CH%d low -> send to LoRa: ", (int)ch);
-    for (i = 0U; i < sizeof(frm); i++)
-    {
-        dbg_printf("%02X ", ((const uint8_t *)&frm)[i]);
-    }
-    dbg_printf("\r\n");
-
-    /* 驱动层负责把这一帧完整发出去(阻塞,发完才返回) */
-    lora_send((const uint8_t *)&frm, (uint16_t)sizeof(frm));
-}
-
-/**
- * @brief 读取某通道运行时参数
- */
-uint8_t app_param_get(bsp_sig_ch_t ch)
-{
-    if (ch >= BSP_SIG_CH_MAX)
-    {
-        return 0U;
-    }
-    return g_ch_param[ch];
-}
-
-/**
- * @brief 修改某通道运行时参数(0~255)
- */
-void app_param_set(bsp_sig_ch_t ch, uint8_t value)
-{
-    if (ch >= BSP_SIG_CH_MAX)
-    {
-        return;
-    }
-    g_ch_param[ch] = value;
-}
-
-/**
- * @brief 处理 LoRa 模块返回的数据(这里简单地以 HEX 打印便于观察)
- */
-static void app_service_lora_rx(void)
-{
-    uint8_t b;
-    uint8_t n = 0U;
-
-    while (lora_rx_available() > 0U)
-    {
-        if (lora_rx_get(&b))
-        {
-            if (n == 0U)
-            {
-                dbg_printf("[APP] LoRa reply: ");
-            }
-            dbg_printf("%02X ", b);
-            n++;
-            if (n >= 32U)
-            {
-                break;
-            }
-        }
-    }
-    if (n > 0U)
-    {
-        dbg_printf("\r\n");
-    }
-}
 
 /*==============================================================================
  * 对外接口(供 main.c 调用)
@@ -195,6 +70,7 @@ void app_init(void)
 #endif
     lora_uart_init();
     bsp_gpio_init();
+    app_lora_init();        /* LoRa 应用层:模式初始化 + 唤醒回调注册 */
     bsp_system_init();
 
 #if (APP_DEBUG_ENABLE == 1)
@@ -234,7 +110,6 @@ void app_task(void)
                 if (app_sig_debounce_confirm((bsp_sig_ch_t)ch))
                 {
                     bsp_gpio_clear_wake_events();
-                    app_sig_report((bsp_sig_ch_t)ch);
                 }
             }
         }
@@ -244,12 +119,8 @@ void app_task(void)
         }
     }
 
-    /* 3) 处理 LoRa 模块返回的数据(简单以 HEX 打印,便于观察) */
-    app_service_lora_rx();
-
-    /* 4) 调试串口命令解析(help/info/read/report/set,
-     *    发布时由 app_config.h 中 APP_DEBUG_CMD_ENABLE=0 整段关闭) */
-    app_cmd_poll();
+    /* 3) LoRa 周期处理:唤醒->等数据到达->收包解析->主动发送 */
+    app_lora_update();
 
 #if APP_DEBUG_HEARTBEAT
     /* 5) LPTIM 周期唤醒一次就打一个点,方便刚开始观察“休眠-唤醒-休眠” */

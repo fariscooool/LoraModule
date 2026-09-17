@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule
+CMAKE_SOURCE_DIR = D:\development\LORA\Firmware\LoraModule
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule
+CMAKE_BINARY_DIR = D:\development\LORA\Firmware\LoraModule
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\development\LORA\Firmware\LoraModule\CMakeFiles D:\development\LORA\Firmware\LoraModule\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\UserDev\UserPRJ\ABCPhase_LowPowerControlModeule\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\development\LORA\Firmware\LoraModule\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,30 +128,6 @@ ABCPhase_LowPowerControlModeule/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ABCPhase_LowPowerControlModeule.dir\build.make CMakeFiles/ABCPhase_LowPowerControlModeule.dir/build
 .PHONY : ABCPhase_LowPowerControlModeule/fast
 
-App/app_cmd.obj: App/app_cmd.c.obj
-.PHONY : App/app_cmd.obj
-
-# target to build an object file
-App/app_cmd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ABCPhase_LowPowerControlModeule.dir\build.make CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.obj
-.PHONY : App/app_cmd.c.obj
-
-App/app_cmd.i: App/app_cmd.c.i
-.PHONY : App/app_cmd.i
-
-# target to preprocess a source file
-App/app_cmd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ABCPhase_LowPowerControlModeule.dir\build.make CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.i
-.PHONY : App/app_cmd.c.i
-
-App/app_cmd.s: App/app_cmd.c.s
-.PHONY : App/app_cmd.s
-
-# target to generate assembly for a file
-App/app_cmd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ABCPhase_LowPowerControlModeule.dir\build.make CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_cmd.c.s
-.PHONY : App/app_cmd.c.s
-
 App/app_lora.obj: App/app_lora.c.obj
 .PHONY : App/app_lora.obj
 
@@ -175,6 +151,30 @@ App/app_lora.s: App/app_lora.c.s
 App/app_lora.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ABCPhase_LowPowerControlModeule.dir\build.make CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.s
 .PHONY : App/app_lora.c.s
+
+App/app_lora_procotol.obj: App/app_lora_procotol.c.obj
+.PHONY : App/app_lora_procotol.obj
+
+# target to build an object file
+App/app_lora_procotol.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ABCPhase_LowPowerControlModeule.dir\build.make CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+.PHONY : App/app_lora_procotol.c.obj
+
+App/app_lora_procotol.i: App/app_lora_procotol.c.i
+.PHONY : App/app_lora_procotol.i
+
+# target to preprocess a source file
+App/app_lora_procotol.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ABCPhase_LowPowerControlModeule.dir\build.make CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.i
+.PHONY : App/app_lora_procotol.c.i
+
+App/app_lora_procotol.s: App/app_lora_procotol.c.s
+.PHONY : App/app_lora_procotol.s
+
+# target to generate assembly for a file
+App/app_lora_procotol.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ABCPhase_LowPowerControlModeule.dir\build.make CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.s
+.PHONY : App/app_lora_procotol.c.s
 
 App/app_main.obj: App/app_main.c.obj
 .PHONY : App/app_main.obj
@@ -985,12 +985,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ABCPhase_LowPowerControlModeule
-	@echo ... App/app_cmd.obj
-	@echo ... App/app_cmd.i
-	@echo ... App/app_cmd.s
 	@echo ... App/app_lora.obj
 	@echo ... App/app_lora.i
 	@echo ... App/app_lora.s
+	@echo ... App/app_lora_procotol.obj
+	@echo ... App/app_lora_procotol.i
+	@echo ... App/app_lora_procotol.s
 	@echo ... App/app_main.obj
 	@echo ... App/app_main.i
 	@echo ... App/app_main.s
