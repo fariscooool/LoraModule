@@ -44,8 +44,13 @@
 #define APP_SIG_CH1_PARAM       0x02
 #define APP_SIG_CH2_PARAM       0x03
 
-/* 外部信号消抖时间(ms):低电平需稳定这么久才认为是有效事件 */
+/* 外部信号消抖时间(ms):电平需稳定这么久才认为消抖完成 */
 #define APP_SIG_DEBOUNCE_MS     20U
+
+/* 消抖时允许的最长等待(ms):
+ * 电平一直在抖时最多阻塞这么久就放弃,避免主循环被拖住/拖长工作时间。
+ * 一般取 APP_SIG_DEBOUNCE_MS 的若干倍即可。 */
+#define APP_SIG_DEBOUNCE_MAX_MS 200U
 
 /*==============================================================================
  * 三、上报帧协议(LoRa 透明传输,原样字节下发)
@@ -92,5 +97,38 @@
  * 仍正常运行/喂狗/响应命令,便于上电后用调试器连接或“按复位”追赶。
  * 想尽快进低功耗省电可设为 0(发布版通常设 0 或 500)。 */
 #define APP_BOOT_KEEP_RUN_MS    10000U
+
+/*==============================================================================
+ * 五、电池电压检测(硬件:ADC1_IN6 / PA6)
+ *  下面这些宏必须在包含 bsp_adc_pwr.h 之前定义才生效
+ *  (各 .c 都在最前面包含本文件,满足该顺序)。
+ *  驱动接口见 Bsp/bsp_adc_pwr.h。
+ *============================================================================*/
+
+/* 分压比:Vbat = Vadc * NUM / DEN
+ * !! 请按板上实际电阻填写 !!
+ *    例:R1=100k(上臂)、R2=100k(下臂) -> 2/1;
+ *        电池直连 PA6(无分压)        -> 1/1 */
+#define BSP_ADC_PWR_DIV_NUM     2U
+#define BSP_ADC_PWR_DIV_DEN     1U
+
+/* 参考电压(= VDDA)标称值 mV:
+ * 仅在 BSP_ADC_PWR_USE_VREFINT = 0 时使用 */
+#define BSP_ADC_PWR_VREF_MV     3300U
+
+/* 1 = 用内部 VREFINT 实测 VDDA 再换算(推荐,结果不受 VDD 漂移影响)
+ * 0 = 直接用上面的标称值,快一点但误差取决于 VDD 精度 */
+#define BSP_ADC_PWR_USE_VREFINT 1U
+
+/* 每次测量采样次数 / 单次转换超时 ms */
+#define BSP_ADC_PWR_SAMPLES     8U
+#define BSP_ADC_PWR_TIMEOUT_MS  5U
+
+/* 电量百分比映射区间与低压告警阈值 mV
+ * !! 占位值(按 2.0V ~ 3.0V 电池组),请按实际电池规格修改 !!
+ *    注:若 VDD 就是电池电压本身,Vbat 会等于 VDDA,阈值需按实际电池组设置 */
+#define BSP_ADC_PWR_BAT_EMPTY_MV 2000U
+#define BSP_ADC_PWR_BAT_FULL_MV  3000U
+#define BSP_ADC_PWR_LOW_MV       2200U
 
 #endif /* APP_CONFIG_H */

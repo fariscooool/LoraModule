@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "dma.h"
 #include "iwdg.h"
 #include "usart.h"
@@ -93,6 +94,7 @@ int main(void)
   // MX_IWDG_Init();
   MX_LPUART1_UART_Init();
   MX_USART2_UART_Init();
+  MX_ADC_Init();
   /* USER CODE BEGIN 2 */
   /* 应用层初始化(Bsp 驱动层在 app_init 内部完成初始化) */
   app_init();
@@ -133,7 +135,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+    RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLLMUL_3;
   RCC_OscInitStruct.PLL.PLLDIV = RCC_PLLDIV_2;

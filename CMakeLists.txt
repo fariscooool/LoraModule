@@ -57,6 +57,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Bsp/bsp_lora_uart.c
     Bsp/bsp_gpio.c
     Bsp/bsp_system.c
+    Bsp/bsp_adc_pwr.c
 )
 
 # Add include paths
