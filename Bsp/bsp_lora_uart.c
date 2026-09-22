@@ -111,6 +111,16 @@ uint8_t lora_rx_get(uint8_t *byte)
     return 1;
 }
 
+uint8_t lora_rx_peek(uint8_t *byte)
+{
+    if (s_rx_tail == s_rx_head)
+    {
+        return 0;                    /* 空 */
+    }
+    *byte = s_rx_fifo[s_rx_tail];
+    return 1;
+}
+
 uint8_t lora_rx_get_bytes(uint8_t *buf, uint16_t len)
 {
     if(buf == NULL){

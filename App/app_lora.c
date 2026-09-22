@@ -41,12 +41,14 @@ static struct
     void (*lora_send)(const uint8_t *data, uint16_t len);     /* 发送(DMA + 阻塞语义) */
     uint32_t (*lora_rx_available)(void);                      /* 可读字节数(与 bsp_lora_uart 一致) */
     uint8_t (*lora_rx_get)(uint8_t *b);                       /* 取一个字节 */
+    uint8_t (*lora_rx_peek)(uint8_t *b);
     uint8_t (*lora_rx_get_bytes)(uint8_t *buf, uint16_t len); /* 取多字节 */
 
 } lora_drv = {
     .lora_send = lora_send,
     .lora_rx_available = lora_rx_available,
     .lora_rx_get = lora_rx_get,
+    .lora_rx_peek = lora_rx_peek,
     .lora_rx_get_bytes = lora_rx_get_bytes,
 };
 
@@ -161,6 +163,20 @@ uint8_t app_lora_read_byte(uint8_t *data)
         return lora_drv.lora_rx_get(data);
     }
     return 0U;
+}
+
+uint8_t app_lora_peek_byte(uint8_t *data)
+{
+    if (data != NULL)
+    {
+        return lora_drv.lora_rx_peek(data);
+    }
+    return 0U;
+}
+
+uint8_t app_lora_rx_available(void)
+{
+    return lora_drv.lora_rx_available();
 }
 
 void app_lora_register_wake_callback(lora_wake_cb_t cb)

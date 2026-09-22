@@ -78,9 +78,6 @@
  * (命令执行结果依赖 dbg_printf 打印,若单独开启请同时保持打印开启) */
 #define APP_DEBUG_CMD_ENABLE    APP_DEBUG_ENABLE
 
-/* 心跳打印:置 1 时每次 LPTIM 周期唤醒打印一次,便于观察“休眠-唤醒”循环 */
-#define APP_DEBUG_HEARTBEAT     0
-
 /* 串口命令是否回显输入(1=回显,便于终端观察) */
 #define APP_CMD_ECHO            0
 

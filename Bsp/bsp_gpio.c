@@ -30,13 +30,20 @@ typedef struct
     uint32_t      sub_priority;
 } bsp_sig_map_t;
 
+/* 引脚映射表。
+ * 注意:每条 EXTI 线号只能属于一个端口(SYSCFG_EXTICR),而 HAL_GPIO_Init()
+ * 每初始化一个 EXTI 引脚就会重写 EXTICR —— 谁最后初始化谁抢到该线。
+ * 所以 PA0(LoRa AUX) 绝不能配成 GPIO_MODE_IT_*,否则会抢走 PB0(CH0)的 EXTI0。 */
 static const bsp_sig_map_t s_sig_map[BSP_SIG_CH_MAX] =
 {
     [BSP_SIG_CH0] = { GPIOB, GPIO_PIN_0, GPIO_MODE_IT_FALLING, GPIO_PULLUP, GPIO_SPEED_FREQ_LOW, 0, EXTI0_1_IRQn, 1, 0 },   /* CH0 */
     [BSP_SIG_CH1] = { GPIOB, GPIO_PIN_1, GPIO_MODE_IT_FALLING, GPIO_PULLUP, GPIO_SPEED_FREQ_LOW, 0, EXTI0_1_IRQn, 1, 0 },   /* CH1 */
     [BSP_SIG_CH2] = { GPIOB, GPIO_PIN_3, GPIO_MODE_IT_FALLING, GPIO_PULLUP, GPIO_SPEED_FREQ_LOW, 0, EXTI2_3_IRQn, 1, 0 },   /* CH2 */
 
-    [BSP_LORA_AUX] = { GPIOA, GPIO_PIN_0, GPIO_MODE_IT_FALLING, GPIO_PULLUP, GPIO_SPEED_FREQ_LOW, 0, EXTI0_1_IRQn, 1, 0 },
+    /* AUX(PA0):只做普通电平读取。绝不能配成 GPIO_MODE_IT_*,
+     * 否则 HAL_GPIO_Init() 会把 SYSCFG_EXTICR1 的 EXTI0 重映射到 PA0,
+     * 抢走 PB0(CH0)的唤醒能力(exti_irq 填 EXTI_NULL 并不能阻止这一点)。 */
+    [BSP_LORA_AUX] = { GPIOA, GPIO_PIN_0, GPIO_MODE_INPUT, GPIO_NOPULL, GPIO_SPEED_FREQ_LOW, 0, EXTI_NULL, 0, 0 },
     [BSP_LORA_M0] = { GPIOA, GPIO_PIN_7, GPIO_MODE_OUTPUT_PP, GPIO_NOPULL, GPIO_SPEED_FREQ_LOW, 0, EXTI_NULL, 0, 0 },
     [BSP_LORA_M1] = { GPIOA, GPIO_PIN_8, GPIO_MODE_OUTPUT_PP, GPIO_NOPULL, GPIO_SPEED_FREQ_LOW, 0, EXTI_NULL, 0, 0 }
 };
@@ -139,47 +146,26 @@ void bsp_gpio_clear_wake_events(void)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    for(int i = 0; i < BSP_SIG_CH_MAX; i++)
+    uint32_t i;
+
+    /* 按引脚号找映射表(PA0 已不再配 EXTI,所以 PIN_0 必定是 PB0,不存在歧义)。
+     * 只有三路信号通道需要记录唤醒事件,AUX/M0/M1 不参与。 */
+    for (i = 0U; i < BSP_SIG_CH_MAX; i++)
     {
-        if(s_sig_map[i].pin == GPIO_Pin)
+        if ((s_sig_map[i].exti_irq == EXTI_NULL) || (s_sig_map[i].pin != GPIO_Pin))
         {
-            
-            break;
+            continue;
         }
-    }
-    if (GPIO_Pin == GPIO_PIN_0)
-    {
-        // PIN 0通道有GPIOA和GPIOB，需要区分。
-        if(bsp_gpio_sig_level(BSP_SIG_CH0) == BSP_GPIO_LOW)
+
+        if (i < BSP_SIG_CH_SIGNAL_MAX)
         {
-            s_wake_events |= (1UL << BSP_SIG_CH0);
-            if(s_exti_callbacks[BSP_SIG_CH0] != NULL)
-            {
-                s_exti_callbacks[BSP_SIG_CH0](BSP_SIG_CH0);
-            }
+            s_wake_events |= (1UL << i);
         }
-        else
+
+        if (s_exti_callbacks[i] != NULL)
         {
-            if(s_exti_callbacks[BSP_LORA_AUX] != NULL)
-            {
-                s_exti_callbacks[BSP_LORA_AUX](BSP_LORA_AUX);
-            }
+            s_exti_callbacks[i]((bsp_sig_ch_t)i);
         }
-    }
-    else if (GPIO_Pin == GPIO_PIN_1)
-    {
-        s_wake_events |= (1UL << BSP_SIG_CH1);
-        if(s_exti_callbacks[BSP_SIG_CH1] != NULL)
-        {
-            s_exti_callbacks[BSP_SIG_CH1](BSP_SIG_CH1);
-        }
-    }
-    else if (GPIO_Pin == GPIO_PIN_3)
-    {
-        s_wake_events |= (1UL << BSP_SIG_CH2);
-        if(s_exti_callbacks[BSP_SIG_CH2] != NULL)
-        {
-            s_exti_callbacks[BSP_SIG_CH2](BSP_SIG_CH2);
-        }
+        break;
     }
 }

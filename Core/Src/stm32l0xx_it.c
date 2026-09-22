@@ -23,7 +23,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usart.h"
-#include "bsp_system.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -224,15 +223,6 @@ void EXTI0_1_IRQHandler(void)
 void EXTI2_3_IRQHandler(void)
 {
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_3);
-}
-
-/**
-  * @brief This function handles LPTIM1 interrupt request.
-  *        (低功耗周期唤醒)
-  */
-void LPTIM1_IRQHandler(void)
-{
-  HAL_LPTIM_IRQHandler(&hlptim);
 }
 
 /* USER CODE END 1 */

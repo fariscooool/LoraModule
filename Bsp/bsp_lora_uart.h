@@ -58,6 +58,12 @@ uint32_t lora_rx_available(void);
 uint8_t lora_rx_get(uint8_t *byte);
 
 /**
+ * @brief 从接收 FIFO 查看一个字节(不移动读指针)
+ * @retval 1=成功  0=空
+ */
+uint8_t lora_rx_peek(uint8_t *byte);
+
+/**
  * @brief 从接收 FIFO 取多字节
  * @retval 1=成功  0=失败(空或可读字节不足)
  */

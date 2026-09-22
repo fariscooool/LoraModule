@@ -12,6 +12,10 @@
  *         平时外部信号线为高电平(内部上拉),出现低电平即认为有事件,
  *         并配置成 EXTI 下降沿中断用于把 MCU 从低功耗模式唤醒。
  *         电平本身由应用层去读,驱动层只负责初始化/读取/记录唤醒事件。
+ *
+ * @note   这三路各占一条独立的 EXTI 线(CH0->EXTI0/CH1->EXTI1/CH2->EXTI3),
+ *         STM32 的每条 EXTI 线只能属于一个端口,所以不能有别的引脚再占同一线号。
+ *         LoRa AUX(PA0)只做普通输入,不配 EXTI(否则会抢走 PB0 的 EXTI0)。
  */
 #ifndef BSP_GPIO_H
 #define BSP_GPIO_H
@@ -37,6 +41,11 @@ typedef enum
     BSP_LORA_M1,        /* PA8 */
     BSP_SIG_CH_MAX
 } bsp_sig_ch_t;
+
+/* 真正的外部信号通道个数(CH0/CH1/CH2)。
+ * BSP_LORA_AUX/M0/M1 与信号共用了同一张引脚映射表,但它们不是"信号通道",
+ * 遍历信号时只能用 BSP_SIG_CH_SIGNAL_MAX,否则会把输出为低的 M0/M1 当成事件。 */
+#define BSP_SIG_CH_SIGNAL_MAX   (3U)
 
 typedef enum
 {
@@ -73,7 +82,7 @@ void bsp_gpio_set_level(bsp_sig_ch_t ch, bsp_gpio_level_t level);
  * @brief 注册某一路信号的 EXTI 回调
  * @param ch       通道号
  * @param callback 回调函数; 传 NULL 表示注销
- * @note  仅对配置了 EXTI 中断的通道有效(如 CH0/CH1/CH2/LORA_AUX)
+ * @note  仅对配置了 EXTI 中断的通道有效(现在只有 CH0/CH1/CH2)
  */
 void bsp_gpio_register_exti_callback(bsp_sig_ch_t ch, bsp_gpio_exti_callback_t callback);
 
