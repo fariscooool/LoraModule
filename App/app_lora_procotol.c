@@ -48,10 +48,6 @@
 #define LORA_CFG_CMD_WRITE  0xC0U   /* 写寄存器(掉电保存);临时写可改 0xC2 */
 #define LORA_CFG_CMD_READ   0xC1U   /* 读参数 */
 
-/* 模块寄存器地址(E22/E220 系列,按你的模块手册核对) */
-#define LORA_CFG_REG_ADDR_H   0x02U  /* 地址高 */
-#define LORA_CFG_REG_ADDR_L   0x03U  /* 地址低 */
-#define LORA_CFG_REG_CHANNEL  0x05U  /* 信道   */
 #define LORA_CFG_SWITCH_MS  20U     /* 模式切换后等待模块稳定(ms) */
 #define LORA_CFG_READY_MS   100U    /* 等 AUX 就绪的超时(ms) */
 #define LORA_CFG_REPLY_MS   300U    /* 等配置回包的超时(ms) */
@@ -321,6 +317,7 @@ void app_lora_set_power(uint8_t *power)
     power_status = power;
 }
 
+/* lora 接收消息解析 */
 /* ---- 整帧校验通过后:功能码 switch 直接落地,长度不符/未知功能码一律丢弃 ---- */
 static void lora_rx_parse(const uint8_t *f)
 {

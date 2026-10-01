@@ -153,7 +153,8 @@ void app_init(void)
         .detail.sped.bits.ttl_rate = BAUD_9600,
         .detail.sped.bits.parity = PARITY_8N1,
         .detail.channel = 0x3C,   /* 根据实际情况初始化 */
-        .detail.option.bits.reserved = 0,
+        .detail.option.bits.power = TX_POWER_20DBM,
+        .detail.option.bits.fec = FEC_DISABLE,
         .detail.option.bits.wakeup_time = WAKEUP_250MS,
         .detail.option.bits.io_drv_mode = IO_DRV_MODE_PUSH_PULL,
         .detail.option.bits.fixed_point_trans = FIXED_POINT_TRANS_DISABLE,
@@ -227,7 +228,12 @@ void app_task(void)
     {
         sig_state = app_sig_state_read();
 
+#if (APP_LORA_AUX_VERIFY_ENABLE == 1)
+        /* 验证阶段:用带 AUX 空口确认的发送,顺便打印是否真的发到空中 */
+        (void)app_lora_signal_verify(sig_state);
+#else
         app_lora_signal(sig_state);     /* 上报信号帧(数据域 = 三相状态字) */
+#endif
         dbg_printf("App lora signal: state=0x%02X\r\n", (unsigned int)sig_state);
     }
     /* 电池电压监测:每轮循环都测一次 */
@@ -259,7 +265,12 @@ void app_task(void)
                         (unsigned int)bat_mv,
                         (unsigned int)bsp_adc_pwr_percent(bat_mv),
                         bsp_adc_pwr_is_low(bat_mv) ? "LOW" : "OK");
+#if (APP_LORA_AUX_VERIFY_ENABLE == 1)
+                /* 验证阶段:用带 AUX 空口确认的发送 */
+                (void)app_lora_power_verify((uint8_t)bsp_adc_pwr_percent(bat_mv));
+#else
                 app_lora_power((uint8_t)bsp_adc_pwr_percent(bat_mv));
+#endif
             }
         }
 #endif

@@ -50,8 +50,12 @@ D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/
                               D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o) (__clzsi2)
 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-vsnprintf.o)
                               CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj (vsnprintf)
+D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcmp.o)
+                              CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj (memcmp)
 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-errno.o)
                               CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj (__errno)
+D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
+                              CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj (memcpy)
 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
                               D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-vsnprintf.o) (_svfprintf_r)
 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
@@ -60,8 +64,6 @@ D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/
                               D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o) (memmove)
 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
                               D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o) (memchr)
-D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
-                              D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o) (memcpy)
 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-reallocr.o)
                               D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o) (_realloc_r)
 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-msizer.o)
@@ -507,6 +509,258 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
  .debug_macro   0x00000000      0x12a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text          0x00000000        0x0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .data          0x00000000        0x0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_node_id
+                0x00000000        0x2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_group   0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_channel
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_seq     0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_awake   0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_state   0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_deadline
+                0x00000000        0x4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_pending
+                0x00000000       0x19 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_pending_len
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_pending_fun
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_pending_need_ack
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_inflight_seq
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_inflight_fun
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_retry   0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_ack_code
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_last_signal
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_last_power
+                0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_signal_ptr
+                0x00000000        0x4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_power_ptr
+                0x00000000        0x4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_result_cb
+                0x00000000        0x4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_stats   0x00000000       0x24 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .data.s_rand   0x00000000        0x4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_rx      0x00000000       0x19 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_rx_idx  0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_rx_tick
+                0x00000000        0x4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_crc8
+                0x00000000       0xaa CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_rand
+                0x00000000       0x44 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_expired
+                0x00000000       0x22 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_uid32
+                0x00000000       0x2c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_node_id
+                0x00000000       0x14 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_e32_encode
+                0x00000000       0xae CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_e32_decode
+                0x00000000       0xba CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_cfg_defaults
+                0x00000000       0x5a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .rodata        0x00000000      0x3ab CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .rodata.net_air_rate_name
+                0x00000000       0x20 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .rodata.net_baud_name
+                0x00000000       0x20 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .rodata.net_parity_name
+                0x00000000       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_dump_cfg
+                0x00000000       0xc8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_cfg_read_raw
+                0x00000000       0x4c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_cfg_apply
+                0x00000000       0x60 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_cfg_selftest
+                0x00000000       0xfc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_set_node_id
+                0x00000000       0x98 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_wake
+                0x00000000       0x2c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_sleep
+                0x00000000       0x2c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_dump_frame
+                0x00000000       0x74 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_send_frame
+                0x00000000       0xac CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_build_frame
+                0x00000000      0x110 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_listen
+                0x00000000       0x40 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_uplink_request
+                0x00000000       0xe4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_send_ack
+                0x00000000       0xa8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_finish
+                0x00000000       0xcc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_tx_go
+                0x00000000       0x78 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_ack_timeout
+                0x00000000       0xb0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_frame_handle
+                0x00000000      0x29c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_rx_byte
+                0x00000000       0xfc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_init
+                0x00000000      0x160 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_set_signal
+                0x00000000       0x1c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_set_power
+                0x00000000       0x1c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_set_result_cb
+                0x00000000       0x1c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_uplink_signal
+                0x00000000       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_uplink_power
+                0x00000000       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_uplink_heartbeat
+                0x00000000       0x1e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_open_rx_window
+                0x00000000       0x18 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_busy
+                0x00000000       0x1c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_task
+                0x00000000       0xb8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_get_stats
+                0x00000000       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_info    0x00000000     0x108c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_abbrev  0x00000000      0x3ef CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_aranges
+                0x00000000      0x140 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_rnglists
+                0x00000000      0x109 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x351 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0xaae CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x75 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x24 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x94 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x3c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x190 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x57 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x370 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x4a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x58 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x1e5 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x3c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0xcd CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0xfc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x131 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x28 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0xaf CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x3ad CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000     0x8137 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x66 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000     0x35ac CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x56 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x8b4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x474 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x189 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x13f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x10d CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x82 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x28e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x28 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x4e1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x6b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x128 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x23b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x22c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x5b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x85 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x255 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x186 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x5cf CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000       0x44 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x12a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_line    0x00000000     0x1272 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_str     0x00000000    0x6b276 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .comment       0x00000000       0x46 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_frame   0x00000000      0x4b4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .ARM.attributes
+                0x00000000       0x2c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
  .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
  .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
@@ -4110,10 +4364,13 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000      0xaae CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000       0x22 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00000000       0x75 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000       0x24 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00000000       0x94 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000       0x3c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000      0x190 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00000000       0x57 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000      0x370 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_macro   0x00000000       0x4a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
@@ -4276,9 +4533,19 @@ Discarded input sections
  .text          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-vsnprintf.o)
  .data          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-vsnprintf.o)
  .bss           0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-vsnprintf.o)
+ .text          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcmp.o)
+ .data          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcmp.o)
+ .bss           0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcmp.o)
+ .text.memcmp   0x00000000       0x1c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcmp.o)
+ .debug_frame   0x00000000       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcmp.o)
+ .ARM.attributes
+                0x00000000       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcmp.o)
  .text          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-errno.o)
  .data          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-errno.o)
  .bss           0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-errno.o)
+ .text          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
+ .data          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
  .text          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
  .data          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
  .bss           0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
@@ -4293,9 +4560,6 @@ Discarded input sections
  .text          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
  .data          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
  .bss           0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
- .text          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
- .data          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
- .bss           0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
  .text          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-reallocr.o)
  .data          0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-reallocr.o)
  .bss           0x00000000        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-reallocr.o)
@@ -4333,6 +4597,7 @@ END GROUP
 LOAD CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
 LOAD CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
 LOAD CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+LOAD CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
 LOAD CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
 LOAD CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
 LOAD CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
@@ -4391,7 +4656,7 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
                 0x08000000                g_pfnVectors
                 0x080000c0                        . = ALIGN (0x4)
 
-.text           0x080000c0     0x6b94
+.text           0x080000c0     0x6b98
                 0x080000c0                        . = ALIGN (0x4)
  *(.text)
  .text          0x080000c0      0x114 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
@@ -4919,118 +5184,120 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
                 0x080065a8                vsnprintf
  .text.__errno  0x080065c0        0xc D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-errno.o)
                 0x080065c0                __errno
+ .text.memcpy   0x080065cc       0x12 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
+                0x080065cc                memcpy
+ *fill*         0x080065de        0x2 
  .text.__ssputs_r
-                0x080065cc       0xc0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
-                0x080065cc                __ssputs_r
+                0x080065e0       0xc0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
+                0x080065e0                __ssputs_r
  .text._svfprintf_r
-                0x0800668c      0x1fc D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
-                0x0800668c                _svfiprintf_r
-                0x0800668c                _svfprintf_r
+                0x080066a0      0x1fc D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
+                0x080066a0                _svfiprintf_r
+                0x080066a0                _svfprintf_r
  .text._printf_common
-                0x08006888       0xde D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x08006888                _printf_common
- *fill*         0x08006966        0x2 
+                0x0800689c       0xde D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0800689c                _printf_common
+ *fill*         0x0800697a        0x2 
  .text._printf_i
-                0x08006968      0x218 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x08006968                _printf_i
- .text.memmove  0x08006b80       0x24 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memmove.o)
-                0x08006b80                memmove
- .text.memchr   0x08006ba4       0x16 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
-                0x08006ba4                memchr
- .text.memcpy   0x08006bba       0x12 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
-                0x08006bba                memcpy
+                0x0800697c      0x218 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0800697c                _printf_i
+ .text.memmove  0x08006b94       0x24 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memmove.o)
+                0x08006b94                memmove
+ .text.memchr   0x08006bb8       0x16 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
+                0x08006bb8                memchr
  .text._realloc_r
-                0x08006bcc       0x60 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-reallocr.o)
-                0x08006bcc                _realloc_r
+                0x08006bce       0x60 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-reallocr.o)
+                0x08006bce                _realloc_r
  .text._malloc_usable_size_r
-                0x08006c2c       0x10 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-msizer.o)
-                0x08006c2c                _malloc_usable_size_r
+                0x08006c2e       0x10 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-msizer.o)
+                0x08006c2e                _malloc_usable_size_r
  *(.glue_7)
- .glue_7        0x08006c3c        0x0 linker stubs
+ .glue_7        0x08006c3e        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08006c3c        0x0 linker stubs
+ .glue_7t       0x08006c3e        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08006c3c        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ *fill*         0x08006c3e        0x2 
+ .eh_frame      0x08006c40        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x08006c3c        0x4 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
-                0x08006c3c                _init
- .init          0x08006c40        0x8 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+ .init          0x08006c40        0x4 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
+                0x08006c40                _init
+ .init          0x08006c44        0x8 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x08006c48        0x4 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
-                0x08006c48                _fini
- .fini          0x08006c4c        0x8 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
-                0x08006c54                        . = ALIGN (0x4)
-                0x08006c54                        _etext = .
+ .fini          0x08006c4c        0x4 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crti.o
+                0x08006c4c                _fini
+ .fini          0x08006c50        0x8 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtn.o
+                0x08006c58                        . = ALIGN (0x4)
+                0x08006c58                        _etext = .
 
-.vfp11_veneer   0x08006c54        0x0
- .vfp11_veneer  0x08006c54        0x0 linker stubs
+.vfp11_veneer   0x08006c58        0x0
+ .vfp11_veneer  0x08006c58        0x0 linker stubs
 
-.v4_bx          0x08006c54        0x0
- .v4_bx         0x08006c54        0x0 linker stubs
+.v4_bx          0x08006c58        0x0
+ .v4_bx         0x08006c58        0x0 linker stubs
 
-.iplt           0x08006c54        0x0
- .iplt          0x08006c54        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x08006c58        0x0
+ .iplt          0x08006c58        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x08006c54      0x2d4
-                0x08006c54                        . = ALIGN (0x4)
+.rodata         0x08006c58      0x2d4
+                0x08006c58                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08006c54      0x15e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
+ .rodata        0x08006c58      0x15e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
  *(.rodata*)
- *fill*         0x08006db2        0x2 
+ *fill*         0x08006db6        0x2 
  .rodata.s_sig_map
-                0x08006db4       0xd8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
+                0x08006db8       0xd8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
  .rodata.UART_SetConfig
-                0x08006e8c       0x48 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
+                0x08006e90       0x48 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
  .rodata.AHBPrescTable
-                0x08006ed4       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
-                0x08006ed4                AHBPrescTable
+                0x08006ed8       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
+                0x08006ed8                AHBPrescTable
  .rodata.APBPrescTable
-                0x08006ee4        0x8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
-                0x08006ee4                APBPrescTable
+                0x08006ee8        0x8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
+                0x08006ee8                APBPrescTable
  .rodata.PLLMulTable
-                0x08006eec        0x9 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
-                0x08006eec                PLLMulTable
+                0x08006ef0        0x9 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
+                0x08006ef0                PLLMulTable
  .rodata._svfprintf_r.str1.1
-                0x08006ef5       0x33 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
+                0x08006ef9       0x33 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
                                  0x11 (size before relaxing)
  .rodata._printf_i.str1.1
-                0x08006f28       0x22 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x08006f4c                        . = ALIGN (0x4)
+                0x08006f2c       0x22 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x08006f50                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08006f28        0x8
-                0x08006f28                        __exidx_start = .
+.ARM            0x08006f2c        0x8
+                0x08006f2c                        __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text.__udivmoddi4
-                0x08006f28        0x8 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
-                0x08006f30                        __exidx_end = .
+                0x08006f2c        0x8 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x08006f34                        __exidx_end = .
 
-.rel.dyn        0x08006f30        0x0
- .rel.iplt      0x08006f30        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x08006f34        0x0
+ .rel.iplt      0x08006f34        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.preinit_array  0x08006f30        0x0
-                0x08006f30                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08006f34        0x0
+                0x08006f34                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08006f30                        PROVIDE (__preinit_array_end = .)
+                0x08006f34                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x08006f30        0x4
-                0x08006f30                        PROVIDE (__init_array_start = .)
+.init_array     0x08006f34        0x4
+                0x08006f34                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08006f30        0x4 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x08006f34                        PROVIDE (__init_array_end = .)
+ .init_array    0x08006f34        0x4 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x08006f38                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x08006f34        0x4
+.fini_array     0x08006f38        0x4
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08006f34        0x4 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
+ .fini_array    0x08006f38        0x4 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08006f38                        _sidata = LOADADDR (.data)
+                0x08006f3c                        _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x88 load address 0x08006f38
+.data           0x20000000       0x88 load address 0x08006f3c
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -5065,17 +5332,17 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
                 0x20000088                        _edata = .
 
 .tm_clone_table
-                0x20000088        0x0 load address 0x08006fc0
+                0x20000088        0x0 load address 0x08006fc4
  .tm_clone_table
                 0x20000088        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000088        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x20000088        0x0 load address 0x08006fc0
+.igot.plt       0x20000088        0x0 load address 0x08006fc4
  .igot.plt      0x20000088        0x0 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp/crtbegin.o
                 0x20000088                        . = ALIGN (0x4)
 
-.bss            0x20000088      0x66c load address 0x08006fc0
+.bss            0x20000088      0x66c load address 0x08006fc4
                 0x20000088                        _sbss = .
                 0x20000088                        __bss_start__ = _sbss
  *(.bss)
@@ -5165,7 +5432,7 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
                 0x200006f4                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200006f4      0x604 load address 0x08006fc0
+                0x200006f4      0x604 load address 0x08006fc4
                 0x200006f8                        . = ALIGN (0x8)
  *fill*         0x200006f4        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -5287,15 +5554,15 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
  .ARM.attributes
                 0x000007e2       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-errno.o)
  .ARM.attributes
-                0x0000080e       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
+                0x0000080e       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
  .ARM.attributes
-                0x0000083a       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0000083a       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
  .ARM.attributes
-                0x00000866       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memmove.o)
+                0x00000866       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x00000892       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
+                0x00000892       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memmove.o)
  .ARM.attributes
-                0x000008be       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
+                0x000008be       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
  .ARM.attributes
                 0x000008ea       0x2c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-reallocr.o)
  .ARM.attributes
@@ -5380,75 +5647,75 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
  .debug_frame   0x00002dc0       0x3c D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
  .debug_frame   0x00002dfc       0x48 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-vsnprintf.o)
  .debug_frame   0x00002e44       0x20 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-errno.o)
- .debug_frame   0x00002e64       0x74 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
- .debug_frame   0x00002ed8       0x54 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_frame   0x00002f2c       0x28 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memmove.o)
- .debug_frame   0x00002f54       0x20 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
- .debug_frame   0x00002f74       0x28 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x00002e64       0x28 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x00002e8c       0x74 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-svfprintf.o)
+ .debug_frame   0x00002f00       0x54 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_frame   0x00002f54       0x28 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memmove.o)
+ .debug_frame   0x00002f7c       0x20 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-memchr-stub.o)
  .debug_frame   0x00002f9c       0x34 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-reallocr.o)
  .debug_frame   0x00002fd0       0x20 D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libg_nano.a(libc_a-msizer.o)
 
-.debug_info     0x00000000     0xf301
- .debug_info    0x00000000      0x60b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
- .debug_info    0x0000060b      0x5a7 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
- .debug_info    0x00000bb2      0x7f0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_info    0x000013a2      0xa06 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_info    0x00001da8      0x8eb CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
- .debug_info    0x00002693      0x6f9 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
- .debug_info    0x00002d8c      0x156 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj
- .debug_info    0x00002ee2      0xb77 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
- .debug_info    0x00003a59      0x3a4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj
- .debug_info    0x00003dfd      0x368 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj
- .debug_info    0x00004165      0x936 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/adc.c.obj
- .debug_info    0x00004a9b      0x2af CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj
- .debug_info    0x00004d4a      0xb0e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj
- .debug_info    0x00005858      0x759 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_info    0x00005fb1      0x1ba CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_info    0x0000616b      0xcea CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_info    0x00006e55      0x79f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
- .debug_info    0x000075f4      0x818 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_info    0x00007e0c      0x96b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_info    0x00008777      0x46d CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj
- .debug_info    0x00008be4      0x624 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_info    0x00009208      0x70b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj
- .debug_info    0x00009913      0x5fe CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj
- .debug_info    0x00009f11      0x678 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_info    0x0000a589     0x3b66 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
- .debug_info    0x0000e0ef      0xdaa CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj
- .debug_info    0x0000ee99      0x2d0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_info    0x0000f169      0x168 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
- .debug_info    0x0000f2d1       0x30 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
+.debug_info     0x00000000     0xf35d
+ .debug_info    0x00000000      0x659 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
+ .debug_info    0x00000659      0x5a7 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
+ .debug_info    0x00000c00      0x7fe CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_info    0x000013fe      0xa06 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_info    0x00001e04      0x8eb CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
+ .debug_info    0x000026ef      0x6f9 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
+ .debug_info    0x00002de8      0x156 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj
+ .debug_info    0x00002f3e      0xb77 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
+ .debug_info    0x00003ab5      0x3a4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj
+ .debug_info    0x00003e59      0x368 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj
+ .debug_info    0x000041c1      0x936 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/adc.c.obj
+ .debug_info    0x00004af7      0x2af CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj
+ .debug_info    0x00004da6      0xb0e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj
+ .debug_info    0x000058b4      0x759 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_info    0x0000600d      0x1ba CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_info    0x000061c7      0xcea CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_info    0x00006eb1      0x79f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
+ .debug_info    0x00007650      0x818 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_info    0x00007e68      0x96b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_info    0x000087d3      0x46d CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj
+ .debug_info    0x00008c40      0x624 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_info    0x00009264      0x70b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj
+ .debug_info    0x0000996f      0x5fe CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj
+ .debug_info    0x00009f6d      0x678 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_info    0x0000a5e5     0x3b66 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
+ .debug_info    0x0000e14b      0xdaa CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj
+ .debug_info    0x0000eef5      0x2d0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_info    0x0000f1c5      0x168 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_info    0x0000f32d       0x30 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
 
-.debug_abbrev   0x00000000     0x379d
- .debug_abbrev  0x00000000      0x213 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
- .debug_abbrev  0x00000213      0x270 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
- .debug_abbrev  0x00000483      0x30f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_abbrev  0x00000792      0x2d7 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_abbrev  0x00000a69      0x2ad CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
- .debug_abbrev  0x00000d16      0x255 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
- .debug_abbrev  0x00000f6b       0xfe CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj
- .debug_abbrev  0x00001069      0x2ac CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
- .debug_abbrev  0x00001315      0x1a2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj
- .debug_abbrev  0x000014b7      0x14f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj
- .debug_abbrev  0x00001606      0x1f2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/adc.c.obj
- .debug_abbrev  0x000017f8       0xfc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj
- .debug_abbrev  0x000018f4      0x230 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj
- .debug_abbrev  0x00001b24      0x184 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_abbrev  0x00001ca8       0x9f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_abbrev  0x00001d47      0x241 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_abbrev  0x00001f88      0x1e2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
- .debug_abbrev  0x0000216a      0x2a4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_abbrev  0x0000240e      0x295 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_abbrev  0x000026a3      0x1d2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj
- .debug_abbrev  0x00002875      0x1ca CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_abbrev  0x00002a3f      0x1cd CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj
- .debug_abbrev  0x00002c0c      0x18c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj
- .debug_abbrev  0x00002d98      0x26f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_abbrev  0x00003007      0x2e0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
- .debug_abbrev  0x000032e7      0x2ba CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj
- .debug_abbrev  0x000035a1      0x11c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_abbrev  0x000036bd       0xbc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
- .debug_abbrev  0x00003779       0x24 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
+.debug_abbrev   0x00000000     0x37d4
+ .debug_abbrev  0x00000000      0x237 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
+ .debug_abbrev  0x00000237      0x270 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
+ .debug_abbrev  0x000004a7      0x322 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_abbrev  0x000007c9      0x2d7 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_abbrev  0x00000aa0      0x2ad CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
+ .debug_abbrev  0x00000d4d      0x255 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
+ .debug_abbrev  0x00000fa2       0xfe CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj
+ .debug_abbrev  0x000010a0      0x2ac CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
+ .debug_abbrev  0x0000134c      0x1a2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x000014ee      0x14f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj
+ .debug_abbrev  0x0000163d      0x1f2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/adc.c.obj
+ .debug_abbrev  0x0000182f       0xfc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj
+ .debug_abbrev  0x0000192b      0x230 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj
+ .debug_abbrev  0x00001b5b      0x184 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_abbrev  0x00001cdf       0x9f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_abbrev  0x00001d7e      0x241 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_abbrev  0x00001fbf      0x1e2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
+ .debug_abbrev  0x000021a1      0x2a4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_abbrev  0x00002445      0x295 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_abbrev  0x000026da      0x1d2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj
+ .debug_abbrev  0x000028ac      0x1ca CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_abbrev  0x00002a76      0x1cd CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj
+ .debug_abbrev  0x00002c43      0x18c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj
+ .debug_abbrev  0x00002dcf      0x26f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_abbrev  0x0000303e      0x2e0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
+ .debug_abbrev  0x0000331e      0x2ba CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj
+ .debug_abbrev  0x000035d8      0x11c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_abbrev  0x000036f4       0xbc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_abbrev  0x000037b0       0x24 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
 
 .debug_aranges  0x00000000      0xd38
  .debug_aranges
@@ -5571,7 +5838,7 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
  .debug_rnglists
                 0x000009d2       0x19 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
 
-.debug_macro    0x00000000    0x142e0
+.debug_macro    0x00000000    0x1416e
  .debug_macro   0x00000000      0x240 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
  .debug_macro   0x00000240      0xaae CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
  .debug_macro   0x00000cee       0xcd CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
@@ -5619,59 +5886,56 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
  .debug_macro   0x0000fd31      0x218 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
  .debug_macro   0x0000ff49       0x22 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
  .debug_macro   0x0000ff6b       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
- .debug_macro   0x0000ff7b      0x342 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x000102bd       0x7b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x00010338       0x24 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x0001035c       0x3c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x00010398       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x000103cc      0x370 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x0001073c       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x00010752       0x4a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x0001079c       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x000107d0       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x000107e0       0x58 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x00010838      0x1e5 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x00010a1d       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x00010a2d       0x3c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x00010a69       0x56 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_macro   0x00010abf      0x2d9 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_macro   0x00010d98       0x58 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_macro   0x00010df0       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_macro   0x00010e06       0x9e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_macro   0x00010ea4      0x112 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_macro   0x00010fb6       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_macro   0x00010fcc       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_macro   0x00010fe2      0x170 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_macro   0x00011152      0x206 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
- .debug_macro   0x00011358      0x1f8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
- .debug_macro   0x00011550      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj
- .debug_macro   0x0001173c      0x21d CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
- .debug_macro   0x00011959       0x40 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
- .debug_macro   0x00011999      0x22b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj
- .debug_macro   0x00011bc4      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj
- .debug_macro   0x00011db0      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/adc.c.obj
- .debug_macro   0x00011f9c      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj
- .debug_macro   0x00012188      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj
- .debug_macro   0x00012374      0x1fa CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_macro   0x0001256e      0x1e2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_macro   0x00012750      0x1e7 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_macro   0x00012937      0x1ea CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
- .debug_macro   0x00012b21      0x1fc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_macro   0x00012d1d      0x20e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_macro   0x00012f2b      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj
- .debug_macro   0x00013103      0x1df CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_macro   0x000132e2      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj
- .debug_macro   0x000134ba      0x1f0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj
- .debug_macro   0x000136aa      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_macro   0x00013882      0x203 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
- .debug_macro   0x00013a85      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj
- .debug_macro   0x00013c5d      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_macro   0x00013e35       0xff CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00013f34       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00013f44       0x75 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x00013fb9       0x94 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x0001404d       0x57 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
- .debug_macro   0x000140a4      0x23c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x0000ff7b      0x330 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x000102ab       0x7b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x00010326       0x24 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x0001034a       0x3c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x00010386       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x000103ba      0x370 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x0001072a       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x00010740       0x4a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x0001078a       0x34 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x000107be       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x000107ce       0x58 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x00010826      0x1e5 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x00010a0b       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x00010a1b       0x3c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x00010a57       0x56 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_macro   0x00010aad      0x2d9 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_macro   0x00010d86       0x58 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_macro   0x00010dde       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_macro   0x00010df4       0x9e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_macro   0x00010e92      0x112 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_macro   0x00010fa4       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_macro   0x00010fba       0x16 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_macro   0x00010fd0      0x170 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_macro   0x00011140      0x206 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
+ .debug_macro   0x00011346      0x1f8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
+ .debug_macro   0x0001153e      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj
+ .debug_macro   0x0001172a      0x21d CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
+ .debug_macro   0x00011947       0x40 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
+ .debug_macro   0x00011987      0x22b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj
+ .debug_macro   0x00011bb2      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj
+ .debug_macro   0x00011d9e      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/adc.c.obj
+ .debug_macro   0x00011f8a      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj
+ .debug_macro   0x00012176      0x1ec CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj
+ .debug_macro   0x00012362      0x1fa CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_macro   0x0001255c      0x1e2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_macro   0x0001273e      0x1e7 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_macro   0x00012925      0x1ea CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
+ .debug_macro   0x00012b0f      0x1fc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_macro   0x00012d0b      0x20e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_macro   0x00012f19      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj
+ .debug_macro   0x000130f1      0x1df CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_macro   0x000132d0      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj
+ .debug_macro   0x000134a8      0x1f0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj
+ .debug_macro   0x00013698      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_macro   0x00013870      0x203 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
+ .debug_macro   0x00013a73      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj
+ .debug_macro   0x00013c4b      0x1d8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_macro   0x00013e23       0xff CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00013f22       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_macro   0x00013f32      0x23c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
 
 .debug_line     0x00000000    0x11f20
  .debug_line    0x00000000      0x8c6 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
@@ -5704,37 +5968,37 @@ LOAD D:/UserDev/UserTOOL/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/13.3.1/t
  .debug_line    0x00011c00      0x2a5 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
  .debug_line    0x00011ea5       0x7b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
 
-.debug_str      0x00000000    0x6f05b
- .debug_str     0x00000000    0x6f05b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
-                              0x67dd3 (size before relaxing)
- .debug_str     0x0006f05b    0x6794a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
- .debug_str     0x0006f05b    0x6a9be CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
- .debug_str     0x0006f05b    0x6ae86 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
- .debug_str     0x0006f05b    0x67ad0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
- .debug_str     0x0006f05b    0x679c8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
- .debug_str     0x0006f05b    0x6759a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj
- .debug_str     0x0006f05b    0x67e00 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
- .debug_str     0x0006f05b    0x67830 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj
- .debug_str     0x0006f05b    0x67651 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj
- .debug_str     0x0006f05b    0x67ab6 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/adc.c.obj
- .debug_str     0x0006f05b    0x676fe CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj
- .debug_str     0x0006f05b    0x67cd4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj
- .debug_str     0x0006f05b    0x67a8b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj
- .debug_str     0x0006f05b    0x6757f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj
- .debug_str     0x0006f05b    0x67ce0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
- .debug_str     0x0006f05b    0x67ada CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
- .debug_str     0x0006f05b    0x67c9b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
- .debug_str     0x0006f05b    0x67ae1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
- .debug_str     0x0006f05b    0x677f8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj
- .debug_str     0x0006f05b    0x67794 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
- .debug_str     0x0006f05b    0x67968 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj
- .debug_str     0x0006f05b    0x6787f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj
- .debug_str     0x0006f05b    0x678f0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
- .debug_str     0x0006f05b    0x683b4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
- .debug_str     0x0006f05b    0x67c69 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj
- .debug_str     0x0006f05b    0x675f4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
- .debug_str     0x0006f05b     0x7059 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
- .debug_str     0x0006f05b       0x98 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
+.debug_str      0x00000000    0x6f056
+ .debug_str     0x00000000    0x6f056 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_main.c.obj
+                              0x67e23 (size before relaxing)
+ .debug_str     0x0006f056    0x6794a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora.c.obj
+ .debug_str     0x0006f056    0x6a966 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_procotol.c.obj
+ .debug_str     0x0006f056    0x6ae86 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
+ .debug_str     0x0006f056    0x67ad0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_lora_uart.c.obj
+ .debug_str     0x0006f056    0x679c8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_gpio.c.obj
+ .debug_str     0x0006f056    0x6759a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_system.c.obj
+ .debug_str     0x0006f056    0x67e00 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_adc_pwr.c.obj
+ .debug_str     0x0006f056    0x67830 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/main.c.obj
+ .debug_str     0x0006f056    0x67651 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/gpio.c.obj
+ .debug_str     0x0006f056    0x67ab6 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/adc.c.obj
+ .debug_str     0x0006f056    0x676fe CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/dma.c.obj
+ .debug_str     0x0006f056    0x67cd4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/usart.c.obj
+ .debug_str     0x0006f056    0x67a8b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_it.c.obj
+ .debug_str     0x0006f056    0x6757f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/stm32l0xx_hal_msp.c.obj
+ .debug_str     0x0006f056    0x67ce0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c.obj
+ .debug_str     0x0006f056    0x67ada CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c.obj
+ .debug_str     0x0006f056    0x67c9b CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c.obj
+ .debug_str     0x0006f056    0x67ae1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c.obj
+ .debug_str     0x0006f056    0x677f8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c.obj
+ .debug_str     0x0006f056    0x67794 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c.obj
+ .debug_str     0x0006f056    0x67968 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c.obj
+ .debug_str     0x0006f056    0x6787f CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c.obj
+ .debug_str     0x0006f056    0x678f0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c.obj
+ .debug_str     0x0006f056    0x683b4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart.c.obj
+ .debug_str     0x0006f056    0x67c69 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_uart_ex.c.obj
+ .debug_str     0x0006f056    0x675f4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/system_stm32l0xx.c.obj
+ .debug_str     0x0006f056     0x7059 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Core/Src/sysmem.c.obj
+ .debug_str     0x0006f056       0x98 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/startup_stm32l031xx.s.obj
 
 .debug_line_str
                 0x00000000      0x11e

@@ -70,6 +70,22 @@ typedef enum {
     FIXED_POINT_TRANS_ENABLE  = 1   // 定点传输使能
 } fixed_point_trans_t;
 
+/* 发射功率(OPTION bit1~0):00 最大,11 最小;
+ * 具体 dBm 随型号而定,例 E32-433T20S: 00=20dBm 01=17dBm 10=14dBm 11=11dBm,
+ *                          E32-433T30S: 00=30dBm 01=27dBm 10=24dBm 11=21dBm */
+typedef enum {
+    TX_POWER_20DBM = 0,  // 00 最大发射功率
+    TX_POWER_17DBM = 1,  // 01
+    TX_POWER_14DBM = 2,  // 10
+    TX_POWER_11DBM = 3   // 11 最小发射功率
+} tx_power_t;
+
+/* FEC 前向纠错开关(OPTION bit2) */
+typedef enum {
+    FEC_DISABLE = 0,  // 关闭 FEC
+    FEC_ENABLE  = 1   // 开启 FEC
+} fec_t;
+
 typedef union {
     uint8_t data[5]; /* 原始数据帧, 5字节 */
     struct {
@@ -87,7 +103,8 @@ typedef union {
         union {
             uint8_t raw;
             struct {
-                uint8_t reserved : 2;       /* 保留位, 2位 */
+                uint8_t power : 1;          /* 功率位, 1位 */
+                uint8_t fec : 1;            /* 前向纠错使能, 1位 */
                 uint8_t wakeup_time : 3;    /* 唤醒时间, 3位 */
                 uint8_t io_drv_mode : 1;    /* IO 驱动模式 */
                 uint8_t fixed_point_trans : 1; /* 定点传输使能 */
