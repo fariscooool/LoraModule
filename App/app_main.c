@@ -152,7 +152,7 @@ void app_init(void)
         .detail.sped.bits.air_rate = AIR_2_4K,
         .detail.sped.bits.ttl_rate = BAUD_9600,
         .detail.sped.bits.parity = PARITY_8N1,
-        .detail.channel = 0x3C,   /* 根据实际情况初始化 */
+        .detail.channel = 0x00,   /* 根据实际情况初始化 */
         .detail.option.bits.power = TX_POWER_20DBM,
         .detail.option.bits.fec = FEC_DISABLE,
         .detail.option.bits.wakeup_time = WAKEUP_250MS,

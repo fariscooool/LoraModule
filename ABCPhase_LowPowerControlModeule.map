@@ -574,6 +574,8 @@ Discarded input sections
  .bss.s_group   0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .bss.s_channel
                 0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .bss.s_host_addr
+                0x00000000        0x2 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .bss.s_seq     0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .bss.s_awake   0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .bss.s_state   0x00000000        0x1 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
@@ -616,9 +618,17 @@ Discarded input sections
                 0x00000000       0x44 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.net_expired
                 0x00000000       0x22 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.net_host_addr_sync
+                0x00000000       0x20 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.app_lora_net_uid32
                 0x00000000       0x2c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.app_lora_net_node_id
+                0x00000000       0x14 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_host_addr
+                0x00000000       0x14 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_group
+                0x00000000       0x14 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_channel
                 0x00000000       0x14 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.net_e32_encode
                 0x00000000       0xae CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
@@ -626,7 +636,7 @@ Discarded input sections
                 0x00000000       0xba CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.app_lora_net_cfg_defaults
                 0x00000000       0x5a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
- .rodata        0x00000000      0x3ab CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .rodata        0x00000000      0x403 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .rodata.net_air_rate_name
                 0x00000000       0x20 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .rodata.net_baud_name
@@ -642,7 +652,9 @@ Discarded input sections
  .text.app_lora_net_cfg_selftest
                 0x00000000       0xfc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.app_lora_net_set_node_id
-                0x00000000       0x98 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+                0x00000000       0xb4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .text.app_lora_net_set_group
+                0x00000000       0xe8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.net_wake
                 0x00000000       0x2c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.net_sleep
@@ -662,15 +674,15 @@ Discarded input sections
  .text.net_finish
                 0x00000000       0xcc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.net_tx_go
-                0x00000000       0x78 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+                0x00000000       0x80 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.net_ack_timeout
                 0x00000000       0xb0 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.net_frame_handle
-                0x00000000      0x29c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+                0x00000000      0x2bc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.net_rx_byte
                 0x00000000       0xfc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.app_lora_net_init
-                0x00000000      0x160 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+                0x00000000      0x184 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.app_lora_net_set_signal
                 0x00000000       0x1c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.app_lora_net_set_power
@@ -691,12 +703,12 @@ Discarded input sections
                 0x00000000       0xb8 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .text.app_lora_net_get_stats
                 0x00000000       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
- .debug_info    0x00000000     0x108c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
- .debug_abbrev  0x00000000      0x3ef CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_info    0x00000000     0x1157 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_abbrev  0x00000000      0x400 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_aranges
-                0x00000000      0x140 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+                0x00000000      0x168 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_rnglists
-                0x00000000      0x109 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+                0x00000000      0x129 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000      0x351 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000      0xaae CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000       0x22 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
@@ -721,7 +733,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000      0x1df CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000       0x10 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
- .debug_macro   0x00000000       0xfc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_macro   0x00000000      0x119 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000      0x131 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000       0x28 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
@@ -755,10 +767,10 @@ Discarded input sections
  .debug_macro   0x00000000      0x5cf CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000       0x44 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .debug_macro   0x00000000      0x12a CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
- .debug_line    0x00000000     0x1272 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
- .debug_str     0x00000000    0x6b276 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_line    0x00000000     0x1366 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_str     0x00000000    0x6b3df CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .comment       0x00000000       0x46 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
- .debug_frame   0x00000000      0x4b4 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
+ .debug_frame   0x00000000      0x544 CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/ABCPhase_LowPowerControlModeule.dir/App/app_lora_net.c.obj
  .group         0x00000000        0xc CMakeFiles/ABCPhase_LowPowerControlModeule.dir/Bsp/bsp_dbg_uart.c.obj
