@@ -174,16 +174,18 @@ void app_init(void)
 
     dbg_printf("\r\n==== %s boot (FW %s) ====\r\n", APP_DEVICE_NAME, APP_FW_VERSION);
 
+    /* 电池电压 ADC:上报帧要带电量,正式版也必须初始化(不是调试专属) */
+    if (bsp_adc_pwr_init() != BSP_ADC_PWR_OK)
+    {
+        dbg_printf("Battery: ADC init failed.\r\n");
+    }
+
 #if (APP_DEBUG_ENABLE == 1)
-    /* 电池电压自检:上电测一次并打印(正式上报可放在 app_task 里按需调用) */
+    /* 上电自检:测一次并打印 */
     {
         uint32_t bat_mv = 0U;
 
-        if (bsp_adc_pwr_init() != BSP_ADC_PWR_OK)
-        {
-            dbg_printf("Battery: ADC init failed.\r\n");
-        }
-        else if (bsp_adc_pwr_read_mv(&bat_mv) != BSP_ADC_PWR_OK)
+        if (bsp_adc_pwr_read_mv(&bat_mv) != BSP_ADC_PWR_OK)
         {
             dbg_printf("Battery: ADC read failed.\r\n");
         }
@@ -254,60 +256,60 @@ void app_task(void)
     case STATE_RUNNING:
 
     {
-        /* 运行状态下的处理逻辑 */
-        /**
-         * LoRa通信
-         * 发送
-         * 等待ACK并确认
-         * 重试机制
-         * 超时处理
-         */
+        /* 运行状态下的处理逻辑:
+         * 事件 -> 读三相状态 + 测电量 -> 提交一轮上报(信号帧+电量帧);
+         * 方案B2:两帧连发,一个窗口收双 ACK,缺帧重发;
+         * 发送/等ACK/重试/超时由上行事务在 app_lora_process() 里推进;
+         * 两帧都确认(或重试用尽)之前不进 Stop。 */
 
         /* 0) 先快照并清掉唤醒事件位图(EXTI 中断里置位,这里消费掉) */
         wake = bsp_gpio_get_wake_events();
         bsp_gpio_clear_wake_events();
 
-        /* 1) 任一路信号出现跳变(EXTI 唤醒位)=> 三路信号全部重新消抖读取,
-        *    拼成一个状态字一次性上报:主机看到的是同一时刻的三相快照 */
+        /* 1) 任一路信号出现跳变(EXTI 唤醒位)=> 三路信号全部重新消抖读取:
+        *    全部为低(状态字=0)表示挂接完成 -> 0xAA,否则 0x55;
+        *    与最新电量一起提交,由后台事务负责发送/确认/重试 */
         if (wake != 0U)
         {
-            sig_state = app_sig_state_read();
-
-            /* 如果信号状态为 0 表示挂接完成, 则上报 */
-            if(sig_state == 0U)
-            {
-                app_lora_signal((uint8_t)APP_SIG_HOOKED_OK);     /* 上报信号帧(数据域 = 三相状态字) */
-                dbg_printf("App lora signal: state=0x%02X\r\n", (unsigned int)sig_state);
-            }
-
-            else
-            {
-                app_lora_signal((uint8_t)APP_SIG_HOOKED_FAIL);     /* 上报信号帧(数据域 = 三相状态字) */
-                dbg_printf("App lora signal: state=0x%02X\r\n", (unsigned int)sig_state);
-            }
-        }
-
-        /* 电池电压监测:每轮循环都测一次 */
-        {
             uint32_t bat_mv = 0U;
+            uint8_t  pwr_pct = 0xFFU;   /* 0xFF = 电量读取失败/无效(主机按无效处理) */
+
+            sig_state = app_sig_state_read();
 
             if (bsp_adc_pwr_read_mv(&bat_mv) == BSP_ADC_PWR_OK)
             {
+                pwr_pct = (uint8_t)bsp_adc_pwr_percent(bat_mv);
                 dbg_printf("Battery: %u mV, %u%%, %s\r\n",
                         (unsigned int)bat_mv,
-                        (unsigned int)bsp_adc_pwr_percent(bat_mv),
+                        (unsigned int)pwr_pct,
                         bsp_adc_pwr_is_low(bat_mv) ? "LOW" : "OK");
-                app_lora_power((uint8_t)bsp_adc_pwr_percent(bat_mv));
             }
+            else
+            {
+                dbg_printf("Battery: read failed\r\n");
+            }
+
+            dbg_printf("App lora signal: state=0x%02X\r\n", (unsigned int)sig_state);
+
+            app_lora_uplink_status((sig_state == 0U) ? (uint8_t)APP_SIG_HOOKED_OK
+                                                     : (uint8_t)APP_SIG_HOOKED_FAIL,
+                                   pwr_pct);
         }
 
-        /* Wait ACK from the host + retry mechanism */
+        /* 2) 交付事务未完成(等 ACK/重发中)不进低功耗,空转 1ms 让下一轮继续推进 */
 
 
 #if (APP_LOWPOWER_ENABLE == 1)
-        dbg_printf("Entering low power (Stop) mode.\r\n");
-        bsp_power_enter_stop();     /* 正常低功耗(阻塞,直到被唤醒) */
-        dbg_printf("Exited low power (Stop) mode.\r\n");
+        if (app_lora_uplink_busy() != 0U)
+        {
+            HAL_Delay(1U);              /* 交付未完成:保持清醒,下一轮继续推进 */
+        }
+        else
+        {
+            dbg_printf("Entering low power (Stop) mode.\r\n");
+            bsp_power_enter_stop();     /* 正常低功耗(阻塞,直到被唤醒) */
+            dbg_printf("Exited low power (Stop) mode.\r\n");
+        }
 #else
     HAL_Delay(250U);                /* 调试:不进低功耗,一直运行 */
 #endif 

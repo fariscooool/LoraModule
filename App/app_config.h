@@ -29,7 +29,11 @@
  * 二、目标主机相关参数
  *============================================================================*/
 
-#define APP_HOST_ADDR           0x01                 /* 目标主机地址 */
+/* 主机地址/信道:
+ * 注:帧内地址字节度已统一为“设备地址”语义(上行=源设备地址,下行=目标设备地址,
+ *     见“四、上报帧协议”);当前透明广播方案下本宏不参与收发过滤,保留给定点传输/
+ *     后续组网(v2)使用。主机模块自身地址设为 0xFFFF(广播)不影响该过滤逻辑。 */
+#define APP_HOST_ADDR           0x01                 /* 目标主机地址(暂作记录) */
 #define APP_HOST_LORA_FREQ_CH   0x00                 /* 目标主机 LoRa 信道/频点索引 */
 
 /*==============================================================================
@@ -61,19 +65,29 @@
 
 
 /*==============================================================================
- * 四、上报帧协议以及相关参数
- * [0] 0x5A
- * [1] 从机地址
- * [2] LEN  = 整帧字节数(含帧头与 CRC)
- * [3] FUN  功能码
- * [4] 帧长 基本固定，暂时数据帧长固定为6Byte，具体长度取决于数据域的长度。
- * [5...LEN-2] 数据域
- * [LEN-1] CRC8 (对 [0..LEN-2] 计算,多项式 0x07)
- * 总长暂时使用的都为为 6 字节。
+ * 四、上报帧协议以及相关参数(v1.5:带 SEQ 与 ACK)
+ *
+ * 地址字节 [1] 的语义(两个方向都是“设备地址”):
+ *   上行(设备->主机):[1] = 本机(源)地址,主机靠它区分哪台设备上报;
+ *   下行(主机->设备):[1] = 目标设备地址,设备靠它判断这条 ACK/命令是不是给自己的。
+ *   主机模块自己可以设为 0xFFFF(广播),但“回复”必须带具体设备地址 ——
+ *   多台设备同信道时才不会把别人的 ACK 当成自己的。
+ *   设备地址必须唯一;0xFF 保留为广播地址,不可用作设备地址。
+ *
+ * 上行帧(设备 -> 主机,信号帧/电量帧各一帧,背靠背发出):
+ *   [0] 0x5A  [1] 本机地址  [2] LEN=7(整帧字节数,含帧头与 CRC)
+ *   [3] FUN   [4] SEQ(每发一帧 +1,重发换新)  [5] 数据域  [6] CRC8(对 [0..5])
+ *
+ * 下行帧(主机 -> 设备;ACK 与点名命令同布局):
+ *   [0] 0x5A  [1] 目标设备地址  [2] LEN=7(命令无数据域时为 5)
+ *   [3] FUN|0x80(ACK)/FUN(命令)  [4] CORR 或命令SEQ  [5] CODE 或数据  [6] CRC8
+ *   ACK:[4]=CORR(被确认帧的 SEQ),[5]=CODE(0=OK)
  *============================================================================*/
 
 #define LORA_FRAME_HEAD     0x5A
-#define LORA_FRAME_MIN_LEN  6U      /* 头+长度+FUN+CRC(数据域为空) */
+#define LORA_FRAME_UPLINK_LEN 7U    /* 上行帧总长:头+地址+长度+FUN+SEQ+数据+CRC */
+#define LORA_FRAME_ACK_LEN  7U      /* ACK 帧总长:头+地址+长度+FUN+CORR+CODE+CRC */
+#define LORA_FRAME_MIN_LEN  5U      /* 头+地址+长度+FUN+CRC(数据域为空) */
 #define LORA_FRAME_DATA_MAX 12U     /* 数据域上限 */
 #define LORA_FRAME_BUF_MAX  (LORA_FRAME_MIN_LEN + LORA_FRAME_DATA_MAX)
 #define LORA_FRAME_GAP_MS   50U     /* 字节间超时:超时则丢弃半帧 */
@@ -82,9 +96,21 @@
 #define LORA_FUN_SIGNAL 0x01        // 信号帧，主要是ABC相开关状态
 #define LORA_FUN_POWER 0x02         // 电池电量帧
 
-/* 下行(主机 -> 设备)功能码:控制参数(需要时启用) */
-#define LORA_FUN_GET_POWER 0x81        // 获取电池电量帧
-#define LORA_FUN_GET_SIGNAL 0x82       // 获取信号帧
+/* 下行(主机 -> 设备)功能码:控制参数(需要时启用)
+ * 注意:0x81/0x82 已让给 ACK 码(FUN|0x80),点名命令迁到 0x1x 区(与 v2 文档一致) */
+#define LORA_FUN_GET_POWER 0x10        // 获取电池电量帧
+#define LORA_FUN_GET_SIGNAL 0x11       // 获取信号帧
+
+/* 上行确认(ACK)与重试参数 */
+#define LORA_FRAME_ACK_BIT  0x80U   /* ACK 功能码 = 原 FUN | 该位 */
+#define LORA_ADDR_BROADCAST 0xFFU   /* 下行帧广播地址:命令可广播,ACK 不接受广播 */
+
+#define LORA_ACK_CODE_OK    0x00U   /* 0=主机已正确接收;非 0 均为失败(主机侧定义) */
+
+#define APP_LORA_ACK_TIMEOUT_MS   300U  /* 等 ACK 窗口(ms);空速 0.3k 时需加大 */
+#define APP_LORA_RETRY_MAX        2U    /* 每帧最多重发次数(每帧总发送 1+N 次) */
+#define APP_LORA_RETRY_BACKOFF_MS 50U   /* 重发前退避(ms),错开碰撞 */
+#define APP_LORA_TX_BACKOFF_MS    0U    /* 首帧发送前退避(ms);多节点同信道建议 0~150 */
 
 /* LoRa 配置命令 */
 #define LORA_CFG_CMD_WRITE  0xC0U   /* 写寄存器(掉电保存);临时写可改 0xC2 */
