@@ -19,6 +19,7 @@
 
 #include "app_main.h"
 #include "app_lora_procotol.h"
+#include "app_lora_config.h"
 
 #include "bsp_dbg_uart.h"
 #include "bsp_gpio.h"

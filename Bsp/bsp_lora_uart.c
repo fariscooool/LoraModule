@@ -32,6 +32,7 @@ static uint8_t   s_rx_dma[LORA_RX_DMA_SIZE];     /* DMA 接收缓冲 */
 static uint8_t   s_rx_fifo[LORA_RX_FIFO_SIZE];   /* 内部 FIFO 存储区 */
 static volatile uint16_t s_rx_head = 0;          /* FIFO 写指针(中断写) */
 static volatile uint16_t s_rx_tail = 0;          /* FIFO 读指针         */
+static lora_rx_diag_t    s_rx_diag;              /* 接收链路诊断计数     */
 
 /*==============================================================================
  * 内部函数
@@ -47,10 +48,32 @@ static void lora_fifo_push(uint8_t byte)
     }
 }
 
+/* 挂载一次 DMA“收到空闲/收满”接收
+ * 失败原因:HAL 在“挂载时已有挂起错误(ORE/FE/NE/PE)”或 DMA 通道没退干净时
+ *          会返回 HAL_ERROR 且不挂载接收 —— 此时必须先把上一次接收收尾
+ *          (Abort 会清错误标志并把 RxState 复位)再重挂,否则接收永久失效。 */
+static uint8_t lora_rx_arm(void)
+{
+    if (HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, s_rx_dma, LORA_RX_DMA_SIZE) == HAL_OK)
+    {
+        return 1U;
+    }
+
+    (void)HAL_UART_AbortReceive(&hlpuart1);
+
+    if (HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, s_rx_dma, LORA_RX_DMA_SIZE) == HAL_OK)
+    {
+        return 1U;
+    }
+
+    s_rx_diag.arm_fail++;
+    return 0U;
+}
+
 /* 启动一次 DMA“收到空闲/收满”接收 */
 static void lora_rx_start(void)
 {
-    (void)HAL_UARTEx_ReceiveToIdle_DMA(&hlpuart1, s_rx_dma, LORA_RX_DMA_SIZE);
+    (void)lora_rx_arm();
 }
 
 /* 等待 DMA 发送真正结束(gState=READY 且 UART 移位寄存器发完 TC) */
@@ -74,6 +97,10 @@ static void lora_wait_tx_done(UART_HandleTypeDef *huart)
 void lora_uart_init(void)
 {
     /* LPUART1 与 DMA 中断已由 CubeMX(MX_DMA_Init / HAL_UART_MspInit)使能 */
+
+    /* 上电前线上/模块可能已留下错误标志:先清一次再挂载,
+     * 避免“带着挂起错误挂载”导致第一次接收就没挂上 */
+    __HAL_UART_CLEAR_PEFLAG(&hlpuart1);
     lora_rx_start();
 }
 
@@ -160,6 +187,7 @@ void lora_uart_rx_event(uint16_t size)
     {
         lora_fifo_push(s_rx_dma[i]);
     }
+    s_rx_diag.rx_bytes += (uint32_t)size;
     lora_rx_start();
 }
 
@@ -167,5 +195,34 @@ void lora_uart_rx_event(uint16_t size)
 void lora_uart_rx_restart(void)
 {
     lora_rx_start();
+}
+
+/* 主循环看护:接收没挂在链上(BUSY_RX)就补挂
+ * 用 NVIC 关中断做临界区,避免与“空闲回调里的重挂”互相踩 */
+uint8_t lora_uart_rx_ensure_armed(lora_rx_diag_t *diag)
+{
+    uint8_t rearmed = 0U;
+
+    NVIC_DisableIRQ(LPUART1_IRQn);
+    NVIC_DisableIRQ(DMA1_Channel2_3_IRQn);
+
+    if (hlpuart1.RxState != HAL_UART_STATE_BUSY_RX)
+    {
+        if (lora_rx_arm() != 0U)
+        {
+            s_rx_diag.rearm++;
+            rearmed = 1U;
+        }
+    }
+
+    NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
+    NVIC_EnableIRQ(LPUART1_IRQn);
+
+    if (diag != NULL)
+    {
+        *diag = s_rx_diag;
+    }
+
+    return rearmed;
 }
 

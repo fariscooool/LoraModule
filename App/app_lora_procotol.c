@@ -60,190 +60,12 @@ static uint8_t lora_crc8_cal(const uint8_t *data, uint16_t len)
     return crc;
 }
 
-/* 清空接收 FIFO 残留(交易前后用) */
-static void lora_cfg_flush_rx(void)
-{
-    uint8_t b;
-
-    while (app_lora_read_byte(&b) != 0U)
-    {
-        /* 丢弃 */
-    }
-}
-
-/*********************************
- * 一、配置包打包以及接收
- * 亿佰特 E22/E220 系列芯片配置参数需要在休眠模式下:
- *   写: C0 + 5字节工作参数，共6字节（掉电保存）
- *   读: 主机发：C1C1C1 模块回：已配置的参数.
- *       主机发：C3C3C3 模块回：版本信息
- *       主机发：C4C4C4 模块复位
- *********************************/
-/* 进入配置模式:切 M0/M1 + 等模块稳定 + 等 AUX 就绪 */
-static void lora_cfg_mode_enter(void)
-{
-    uint32_t t0;
-
-    app_lora_set_mode(LORA_MODE_SLEEP);         /* M1=1,M0=1:配置模式 */
-    HAL_Delay(LORA_CFG_SWITCH_MS);
-
-    /* 空闲时 AUX 为高;超时也继续,按最快路径尝试 */
-    t0 = HAL_GetTick();
-    while ((bsp_gpio_sig_level(BSP_LORA_AUX) == BSP_GPIO_LOW) &&
-           ((HAL_GetTick() - t0) < LORA_CFG_READY_MS))
-    {
-        HAL_Delay(1U);
-    }
-}
-
-/* 退出配置模式:切回正常传输模式 */
-static void lora_cfg_mode_exit(void)
-{
-    app_lora_set_mode(LORA_MODE_NORMAL);
-    HAL_Delay(LORA_CFG_SWITCH_MS);
-}
-
-/* 发一帧厂商帧并等回包(收满 rx_len 字节)
- * @retval 1=收满  0=超时 */
-static uint8_t lora_cfg_transaction(const uint8_t *tx, uint8_t tx_len,
-                                    uint8_t *rx, uint8_t rx_len)
-{
-    uint32_t t0;
-    uint8_t  got = 0U;
-
-    lora_cfg_flush_rx();
-    app_lora_send_bytes(tx, tx_len);
-
-    // 如果不需要接收回包,直接返回成功
-    if(rx_len == 0U || rx == NULL)
-    {
-        return 1U;
-    }
-
-    t0 = HAL_GetTick();
-    while ((got < rx_len) && ((HAL_GetTick() - t0) < LORA_CFG_REPLY_MS))
-    {
-        if (app_lora_read_byte(&rx[got]) != 0U)
-        {
-            got++;
-            t0 = HAL_GetTick();     /* 每收到一个字节续期,容忍慢回包 */
-        }
-    }
-    return (got == rx_len) ? 1U : 0U;
-}
-
-void app_lora_enter_sleep_mode(void)
-{
-    lora_cfg_mode_enter();
-}
-
-uint8_t app_lora_cfg_write(const lora_reg_parm_cfg_t cfg)
-{
-    uint8_t tx[1U + APP_LORA_CFG_DATA_MAX];
-    uint8_t ok = 0U;
-    uint8_t i;
-
-    tx[0] = LORA_CFG_CMD_WRITE;
-
-    for (i = 0U; i < APP_LORA_CFG_DATA_MAX; i++)
-    {
-        tx[1U + i] = cfg.data[i];
-    }
-
-    lora_cfg_mode_enter();
-    if (lora_cfg_transaction(tx, (uint8_t)(1U + APP_LORA_CFG_DATA_MAX), NULL, 0) != 0U)
-    {
-        ok = 1U;
-    }
-    lora_cfg_mode_exit();
-
-    return ok;
-}
-
-
-uint8_t app_lora_cfg_read(lora_reg_parm_cfg_t *buf)
-{
-    uint8_t tx[3U];
-    uint8_t rx[APP_LORA_CFG_DATA_MAX + 1]; //返回C0 + 数据域(5Byte)
-    uint8_t ok = 0U;
-    uint8_t i;
-
-    if (buf == NULL)
-    {
-        return 0U;
-    }
-
-    tx[0] = LORA_CFG_CMD_READ;
-    tx[1] = LORA_CFG_CMD_READ;
-    tx[2] = LORA_CFG_CMD_READ;
-
-    lora_cfg_mode_enter();
-
-    // 虽然用DMA，但是实际接口为阻塞发送，因此tx为局部变量是安全的，但最好用静态变量以防止未来接口修改为非阻塞模式
-    if (lora_cfg_transaction(tx, 3U, rx, (uint8_t)(sizeof(rx))) != 0U)
-    {
-        for (i = 0U; i < APP_LORA_CFG_DATA_MAX; i++)
-        {
-            buf->data[i] = rx[i + 1];
-        }
-        ok = 1U;
-    }
-    lora_cfg_mode_exit();
-
-    return ok;
-}
-
-/**
- * @brief 一次配置模式下完成 "写 + 读回" 并比对
- * @retval 1=写回显与读回都一致 0=失败
- */
-static uint8_t lora_cfg_write_read_verify(const lora_reg_parm_cfg_t val)
-{
-    uint8_t tx[1U + APP_LORA_CFG_DATA_MAX];
-    lora_reg_parm_cfg_t rx;
-    uint8_t ok = 0U;
-    uint8_t i;
-
-    lora_cfg_mode_enter();
-
-    /* 1) 写:模块应原样回显 */
-    tx[0] = LORA_CFG_CMD_WRITE;
-    for (i = 0U; i < APP_LORA_CFG_DATA_MAX; i++)
-    {
-        tx[1U + i] = val.data[i];
-    }
-    // 虽然用DMA，但是实际接口为阻塞发送，因此tx为局部变量是安全的，但最好用静态变量以防止未来接口修改为非阻塞模式
-    if (lora_cfg_transaction(tx, (uint8_t)(1U + APP_LORA_CFG_DATA_MAX), NULL, 0) != 0U)
-    {
-        ok = 1U;
-    }
-
-    /* 2) 读回数据,解析后与期望值逐个比对 */
-    if(app_lora_cfg_read(&rx) != 0U)
-    {
-        for (i = 0U; i < APP_LORA_CFG_DATA_MAX; i++)
-        {
-            if (rx.data[i] != val.data[i])
-            {
-                ok = 0U;
-                break;
-            }
-        }
-    }
-
-    lora_cfg_mode_exit();
-
-    return ok;
-}
-
-uint8_t app_lora_cfg_reg_verify(lora_reg_parm_cfg_t val)
-{
-    return lora_cfg_write_read_verify(val);
-}
-
-
 /*********************************
  * 二、上行交付事务(两帧连发 + 单窗口收双 ACK + 缺帧重发)
+ *
+ * 注:本章节行为由 app_config.h 的 APP_LORA_ACK_ENABLE 控制。
+ *     =0(简化版,当前交付):只保留"两帧背靠背发出",不等 ACK/不重发/不占事务;
+ *     =1(完整版):下述状态机全流程生效。代码始终保留,仅编译期裁剪。
  *
  * 一轮上报 = 信号帧(0x01) + 电量帧(0x02) 背靠背发出,两帧各带 SEQ;
  * 主机对两帧分别回 ACK(FUN|0x80,CORR=被确认的 SEQ,CODE=0 为成功);
@@ -303,6 +125,26 @@ static void uplink_send_frame(uint8_t fun, uint8_t seq, uint8_t payload)
     app_lora_send_bytes(tx, (uint16_t)sizeof(tx));
 }
 
+#if (APP_LORA_ACK_ENABLE == 0)
+/* 简化版:一轮 = 信号帧 + 电量帧 背靠背发出,不等 ACK、不重发、不占事务 */
+static void uplink_send_round_now(uint8_t sig, uint8_t power)
+{
+    s_uplink.round_sig = sig;
+    s_uplink.round_pwr = power;
+    s_uplink.state     = UPLINK_IDLE;       /* 不占事务:发完即空闲,可进 Stop */
+
+    s_uplink.seq_sig = s_uplink.seq_next++;
+    uplink_send_frame(LORA_FUN_SIGNAL, s_uplink.seq_sig, sig);
+
+    s_uplink.seq_pwr = s_uplink.seq_next++;
+    uplink_send_frame(LORA_FUN_POWER, s_uplink.seq_pwr, power);
+
+    dbg_printf("[UPLINK] tx SIG_seq=%u PWR_seq=%u (ACK disabled)\r\n",
+               (unsigned int)s_uplink.seq_sig, (unsigned int)s_uplink.seq_pwr);
+}
+#endif
+
+#if (APP_LORA_ACK_ENABLE == 1)
 /* 开始一轮:两帧都待发,重试额度重置 */
 static void uplink_begin_round(uint8_t sig, uint8_t power)
 {
@@ -323,17 +165,31 @@ static void uplink_begin_round(uint8_t sig, uint8_t power)
 /* 发送 pending 掩码里的帧(每帧换新 SEQ),然后进入等待窗口 */
 static void uplink_send_pending(void)
 {
-    if ((s_uplink.pending_mask & UPLINK_BIT_SIG) != 0U)
+    uint8_t mask = s_uplink.pending_mask;
+
+    if ((mask & UPLINK_BIT_SIG) != 0U)
     {
         s_uplink.seq_sig = s_uplink.seq_next++;
         uplink_send_frame(LORA_FUN_SIGNAL, s_uplink.seq_sig, s_uplink.round_sig);
     }
 
-    if ((s_uplink.pending_mask & UPLINK_BIT_PWR) != 0U)
+    if ((mask & UPLINK_BIT_PWR) != 0U)
     {
         s_uplink.seq_pwr = s_uplink.seq_next++;
         uplink_send_frame(LORA_FUN_POWER, s_uplink.seq_pwr, s_uplink.round_pwr);
     }
+
+    /* 记下本轮实际发出的帧与 SEQ:主机 ACK 的 CORR 必须与之相等 */
+    dbg_printf("[UPLINK] tx mask=0x%02X", (unsigned int)mask);
+    if ((mask & UPLINK_BIT_SIG) != 0U)
+    {
+        dbg_printf(" SIG_seq=%u", (unsigned int)s_uplink.seq_sig);
+    }
+    if ((mask & UPLINK_BIT_PWR) != 0U)
+    {
+        dbg_printf(" PWR_seq=%u", (unsigned int)s_uplink.seq_pwr);
+    }
+    dbg_printf(" (等 %u ms)\r\n", (unsigned int)APP_LORA_ACK_TIMEOUT_MS);
 
     s_uplink.tick = HAL_GetTick();          /* 窗口从最后一帧发出后开始计 */
     s_uplink.state = UPLINK_WAIT_ACK;
@@ -416,6 +272,8 @@ static void uplink_ack_rx(uint8_t fun, uint8_t corr, uint8_t code)
 
     if (s_uplink.state != UPLINK_WAIT_ACK)
     {
+        dbg_printf("[UPLINK] ACK(fun=0x%02X corr=%u) 被丢:当前 state=%u,不在等 ACK 窗口\r\n",
+                   (unsigned int)fun, (unsigned int)corr, (unsigned int)s_uplink.state);
         return;                     /* 不在等 ACK(迟到/重复包):忽略 */
     }
 
@@ -424,6 +282,9 @@ static void uplink_ack_rx(uint8_t fun, uint8_t corr, uint8_t code)
         bit = UPLINK_BIT_SIG;
         if (((s_uplink.pending_mask & bit) == 0U) || (corr != s_uplink.seq_sig))
         {
+            dbg_printf("[UPLINK] ACK SIG corr=%u 被丢:pending=0x%02X 当前 seq_sig=%u\r\n",
+                       (unsigned int)corr, (unsigned int)s_uplink.pending_mask,
+                       (unsigned int)s_uplink.seq_sig);
             return;                 /* 不是当前在等的那一帧:忽略 */
         }
     }
@@ -432,11 +293,15 @@ static void uplink_ack_rx(uint8_t fun, uint8_t corr, uint8_t code)
         bit = UPLINK_BIT_PWR;
         if (((s_uplink.pending_mask & bit) == 0U) || (corr != s_uplink.seq_pwr))
         {
+            dbg_printf("[UPLINK] ACK PWR corr=%u 被丢:pending=0x%02X 当前 seq_pwr=%u\r\n",
+                       (unsigned int)corr, (unsigned int)s_uplink.pending_mask,
+                       (unsigned int)s_uplink.seq_pwr);
             return;
         }
     }
     else
     {
+        dbg_printf("[UPLINK] ACK fun=0x%02X 被丢:不是 0x01/0x02 的确认\r\n", (unsigned int)fun);
         return;                     /* 未知 ACK:忽略 */
     }
 
@@ -496,11 +361,13 @@ static void uplink_poll(void)
         break;
     }
 }
+#endif /* APP_LORA_ACK_ENABLE == 1:完整交付状态机 */
 
 /* ---- 对外接口 ---- */
 
 void app_lora_uplink_status(uint8_t sig, uint8_t power)
 {
+#if (APP_LORA_ACK_ENABLE == 1)
     if (s_uplink.state == UPLINK_IDLE)
     {
         uplink_begin_round(sig, power);
@@ -518,11 +385,19 @@ void app_lora_uplink_status(uint8_t sig, uint8_t power)
         s_uplink.latest_pwr = power;
         s_uplink.reshoot = 1U;
     }
+#else
+    /* 简化版:不关心事务状态,来一次就立即把两帧送出去(不合并、不等确认) */
+    uplink_send_round_now(sig, power);
+#endif
 }
 
 uint8_t app_lora_uplink_busy(void)
 {
+#if (APP_LORA_ACK_ENABLE == 1)
     return (s_uplink.state != UPLINK_IDLE) ? 1U : 0U;
+#else
+    return 0U;          /* 简化版:帧已发完,允许立刻进 Stop */
+#endif
 }
 
 void app_lora_uplink_get_stats(app_lora_uplink_stats_t *out)
@@ -570,10 +445,17 @@ static void lora_rx_parse(const uint8_t *f, uint8_t len)
 {
     uint8_t fun = f[3];
 
+    /* 收到一帧 CRC 正确的帧:先记一笔(这一行出现即证明“字节到了 + 帧完整 + CRC 对”) */
+    dbg_printf("[LORA RX] frame fun=0x%02X addr=0x%02X len=%u\r\n",
+               (unsigned int)fun, (unsigned int)f[1], (unsigned int)len);
+
     /* 下行帧 [1] = 目标设备地址:只处理"发给本机"或"广播"的帧。
      * 主机模块自身是 0xFFFF(广播)也没关系 —— 过滤看的是帧里填的目标地址。 */
     if ((f[1] != (uint8_t)APP_DEVICE_ADDR) && (f[1] != LORA_ADDR_BROADCAST))
     {
+        dbg_printf("[LORA RX] drop: addr=0x%02X 既不是本机(0x%02X)也不是广播(0x%02X)\r\n",
+                   (unsigned int)f[1], (unsigned int)APP_DEVICE_ADDR,
+                   (unsigned int)LORA_ADDR_BROADCAST);
         return;
     }
 
@@ -581,10 +463,21 @@ static void lora_rx_parse(const uint8_t *f, uint8_t len)
      * ACK 必须精确指向本机:广播 ACK 一律忽略,避免多台设备 SEQ 相同时互相误确认。 */
     if ((fun & LORA_FRAME_ACK_BIT) != 0U)
     {
+#if (APP_LORA_ACK_ENABLE == 1)
         if ((f[1] == (uint8_t)APP_DEVICE_ADDR) && (len >= LORA_FRAME_ACK_LEN))
         {
             uplink_ack_rx((uint8_t)(fun & (uint8_t)~LORA_FRAME_ACK_BIT), f[4], f[5]);
         }
+        else
+        {
+            dbg_printf("[LORA RX] drop ACK: addr=0x%02X len=%u(要求 addr=0x%02X, len>=%u)\r\n",
+                       (unsigned int)f[1], (unsigned int)len,
+                       (unsigned int)APP_DEVICE_ADDR, (unsigned int)LORA_FRAME_ACK_LEN);
+        }
+#else
+        /* 简化版:主机仍会回 ACK,这里一律忽略(帧格式不变,只是不等确认) */
+        dbg_printf("[LORA RX] ack ignored (APP_LORA_ACK_ENABLE=0)\r\n");
+#endif
         return;
     }
 
@@ -612,6 +505,21 @@ static void lora_rx_parse(const uint8_t *f, uint8_t len)
 static uint8_t  s_rx_buf[LORA_FRAME_BUF_MAX];
 static uint8_t  s_rx_idx;       /* 0 = 正在找帧头,其余为已收字节数 */
 static uint32_t s_rx_tick;      /* 最近一个字节的时刻,用于字节间超时 */
+
+/* 把一段原始字节按十六进制打出来:定位“字节到底有没有到 MCU”这一层 */
+#if (APP_DEBUG_ENABLE == 1)
+static void lora_rx_dump(const uint8_t *p, uint8_t n)
+{
+    uint8_t i;
+
+    dbg_printf("[LORA RX] raw %uB:", (unsigned int)n);
+    for (i = 0U; i < n; i++)
+    {
+        dbg_printf(" %02X", (unsigned int)p[i]);
+    }
+    dbg_printf("\r\n");
+}
+#endif
 
 /* 喂一个字节:无阻塞、无忙等,有多少吃多少 */
 static void lora_rx_byte(uint8_t b)
@@ -650,6 +558,10 @@ static void lora_rx_byte(uint8_t b)
         {
             lora_rx_parse(s_rx_buf, len);
         }
+        else
+        {
+            dbg_printf("[LORA RX] crc err len=%u\r\n", (unsigned int)len);
+        }
         s_rx_idx = 0U;
     }
 }
@@ -657,10 +569,44 @@ static void lora_rx_byte(uint8_t b)
 void app_lora_process(void)
 {
     uint8_t b;
+#if (APP_DEBUG_ENABLE == 1)
+    uint8_t burst[24];
+    uint8_t n = 0U;
+    uint8_t i;
+    lora_rx_diag_t diag;
+#endif
+
+    /* 0) 接收自愈:挂载失败/被接收错误打断时补挂,避免“永久收不到但不报错” */
+#if (APP_DEBUG_ENABLE == 1)
+    if (lora_uart_rx_ensure_armed(&diag) != 0U)
+    {
+        dbg_printf("[LORA RX] re-armed (bytes=%lu arm_fail=%u rearm=%u)\r\n",
+                   (unsigned long)diag.rx_bytes, (unsigned int)diag.arm_fail,
+                   (unsigned int)diag.rearm);
+    }
+#else
+    (void)lora_uart_rx_ensure_armed(NULL);
+#endif
 
     /* 1) 收:把接收 FIFO 里的字节全部喂给状态机(非阻塞,有多少吃多少)。
      *    注:不再依赖“模块唤醒标志”——AUX(PA0) 没有 EXTI(要让出 EXTI0 给 PB0),
-     *    该标志不会置位;直接抽干 FIFO,ACK/下行命令才能被处理。 */
+     *    该标志不会置位;直接抽干 FIFO,ACK/下行命令才能被处理。
+     *    调试期先把这一批字节按十六进制打出来:确认“字节到底有没有到 MCU”。 */
+#if (APP_DEBUG_ENABLE == 1)
+    while ((n < (uint8_t)sizeof(burst)) && (app_lora_read_byte(&burst[n]) != 0U))
+    {
+        n++;
+    }
+    if (n != 0U)
+    {
+        lora_rx_dump(burst, n);
+        for (i = 0U; i < n; i++)
+        {
+            lora_rx_byte(burst[i]);
+        }
+    }
+#endif
+
     while (app_lora_read_byte(&b) != 0U)
     {
         lora_rx_byte(b);
@@ -673,5 +619,7 @@ void app_lora_process(void)
     }
 
     /* 3) 推进上行交付事务(退避 -> 发送 -> 等ACK -> 重发/收尾) */
+#if (APP_LORA_ACK_ENABLE == 1)
     uplink_poll();
+#endif
 }

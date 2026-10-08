@@ -81,6 +81,30 @@ void lora_uart_rx_event(uint16_t size);
  */
 void lora_uart_rx_restart(void);
 
+/*==============================================================================
+ * 接收链路诊断 / 自愈
+ *============================================================================*/
+
+/**
+ * @brief 接收链路诊断计数(调试用)
+ */
+typedef struct
+{
+    uint32_t rx_bytes;   /* 累计从模块收到的字节数      */
+    uint16_t arm_fail;   /* 挂载接收失败次数(Abort 重试后仍失败) */
+    uint16_t rearm;      /* 掉线后自动重挂成功次数      */
+} lora_rx_diag_t;
+
+/**
+ * @brief 接收自愈:检查 DMA 接收是否还挂在链上,掉线则重挂
+ * @param[out] diag 诊断计数(可为 NULL)
+ * @retval 1=本次执行了重挂  0=本来就正常(未动)
+ * @note  主循环上下文调用,不要在中断里调用。
+ *        HAL 在“挂载时已有挂起错误(ORE/FE/NE 等)”时会返回 HAL_ERROR 且
+ *        不会真正挂上接收,那样设备会永久收不到(发送不受影响),故需要这层看护。
+ */
+uint8_t lora_uart_rx_ensure_armed(lora_rx_diag_t *diag);
+
 #ifdef __cplusplus
 }
 #endif

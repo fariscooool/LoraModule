@@ -21,7 +21,7 @@
 #define APP_DEVICE_NAME         "ABCPhase-LP"        /* 设备/产品名          */
 #define APP_DEVICE_MODEL        "STM32L031G6U6"      /* MCU 型号(硬件平台)   */
 #define APP_FW_VERSION          "1.0.0"              /* 固件版本             */
-#define APP_DEVICE_ADDR         0x01                 /* 设备地址(可用于组网/
+#define APP_DEVICE_ADDR         0x02                 /* 设备地址(可用于组网/
                                                         上位机识别)         */
 #define APP_LORA_FREQ_CH        0x00                 /* LoRa 信道/频点索引,
                                                         具体含义按你的模块定 */
@@ -106,6 +106,12 @@
 #define LORA_ADDR_BROADCAST 0xFFU   /* 下行帧广播地址:命令可广播,ACK 不接受广播 */
 
 #define LORA_ACK_CODE_OK    0x00U   /* 0=主机已正确接收;非 0 均为失败(主机侧定义) */
+
+/* 上行交付模式总开关(ACK/重试/退避相关代码全部保留,只做编译期裁剪):
+ *   1 = 完整交付:两帧连发 + 单窗口收双 ACK + 缺帧重发 + 退避(见 Docs/LoRa_Protocol_v1.5.md §6)
+ *   0 = 简化版(样机):两帧背靠背发出即结束 —— 不等 ACK、不重发、不占事务,
+ *       发完可立即进 Stop;主机仍按协议回 ACK,设备直接忽略,空口帧格式完全不变 */
+#define APP_LORA_ACK_ENABLE       0
 
 #define APP_LORA_ACK_TIMEOUT_MS   300U  /* 等 ACK 窗口(ms);空速 0.3k 时需加大 */
 #define APP_LORA_RETRY_MAX        2U    /* 每帧最多重发次数(每帧总发送 1+N 次) */

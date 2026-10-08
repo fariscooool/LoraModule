@@ -21,34 +21,7 @@ typedef struct
     uint8_t  channel;            /* 模块信道              */
 } app_lora_ctrl_t;
 
-// LoRa 配置寄存器操作接口================================
-/**
- * @brief 写一个模块寄存器(等待模块回显)
- * @param  reg 寄存器地址
- * @param  data 待写入数据
- * @param  len  字节数(<=8)
- * @retval 1=回显一致 0=失败
- */
-uint8_t app_lora_cfg_write(const lora_reg_parm_cfg_t cfg);
 
-/**
- * @brief 读一个模块寄存器(解析 C1+REG+DATA 回包)
- * @param  buf 读回数据缓冲区
- * @retval 1=成功 0=失败(超时或回包头不匹配)
- */
-uint8_t app_lora_cfg_read(lora_reg_parm_cfg_t *buf);
-
-/**
- * @brief 将配置参数写进模块寄存器(一次配置模式内完成 "写(回显校验) + 读(读回比对)")
- * @param  val 期望值
- * @retval 1=写回显与读回都一致 0=失败
- */
-uint8_t app_lora_cfg_reg_verify(lora_reg_parm_cfg_t val);
-
-/**
- * @brief 让 LoRa 模块进入睡眠模式,降低设备整体功耗
- */
-void app_lora_enter_sleep_mode(void);
 
 // LoRa 协议处理接口================================
 /**
@@ -69,6 +42,7 @@ void app_lora_power(uint8_t power);
 
 /**
  * @brief 上行交付统计(调试/现场诊断用)
+ * @note  APP_LORA_ACK_ENABLE=0(简化版)时不做交付确认,本组计数恒为 0
  */
 typedef struct
 {
@@ -79,17 +53,22 @@ typedef struct
 } app_lora_uplink_stats_t;
 
 /**
- * @brief 提交一轮上报(信号+电量):后台事务负责两帧连发、单窗口等双 ACK、
- *        缺帧重发、超时重试;两帧都确认(或重试用尽)前 busy() 保持 1
+ * @brief 提交一轮上报(信号+电量)
  * @param sig   信号数据域(如 APP_SIG_HOOKED_OK / APP_SIG_HOOKED_FAIL)
  * @param power 电量 0~100;0xFF=无效
- * @note  非阻塞。事务进行中再次调用:数据记为"最新快照",本轮结束后自动补发一轮
+ * @note  非阻塞。
+ *        APP_LORA_ACK_ENABLE=1:后台事务负责两帧连发、单窗口等双 ACK、缺帧重发、
+ *          超时重试;两帧都确认(或重试用尽)前 busy() 保持 1;事务进行中再次调用:
+ *          数据记为"最新快照",本轮结束后自动补发一轮。
+ *        APP_LORA_ACK_ENABLE=0(简化版):两帧背靠背发出即返回,不等 ACK、
+ *          不重发、不合并,下一次调用立即再发一轮。
  */
 void app_lora_uplink_status(uint8_t sig, uint8_t power);
 
 /**
  * @brief 上报事务是否未完成(等 ACK / 重发中)
  * @retval 1=未完成(不要进 Stop)  0=空闲
+ * @note  APP_LORA_ACK_ENABLE=0 时恒为 0(帧已发完,可立即进 Stop)
  */
 uint8_t app_lora_uplink_busy(void);
 
