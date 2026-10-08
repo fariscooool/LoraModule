@@ -29,31 +29,28 @@ typedef struct
  * @param  len  字节数(<=8)
  * @retval 1=回显一致 0=失败
  */
-uint8_t app_lora_cfg_write(const lora_reg_parm_cfg_t cfg, uint8_t len);
+uint8_t app_lora_cfg_write(const lora_reg_parm_cfg_t cfg);
 
 /**
  * @brief 读一个模块寄存器(解析 C1+REG+DATA 回包)
  * @param  buf 读回数据缓冲区
- * @param  len 期望读取字节数(<=8)
  * @retval 1=成功 0=失败(超时或回包头不匹配)
  */
-uint8_t app_lora_cfg_read(lora_reg_parm_cfg_t *buf, uint8_t len);
+uint8_t app_lora_cfg_read(lora_reg_parm_cfg_t *buf);
 
 /**
  * @brief 将配置参数写进模块寄存器(一次配置模式内完成 "写(回显校验) + 读(读回比对)")
  * @param  val 期望值
- * @param  len 字节数(<=8)
  * @retval 1=写回显与读回都一致 0=失败
  */
-uint8_t app_lora_cfg_reg_verify(lora_reg_parm_cfg_t val, uint8_t len);
+uint8_t app_lora_cfg_reg_verify(lora_reg_parm_cfg_t val);
+
+/**
+ * @brief 让 LoRa 模块进入睡眠模式,降低设备整体功耗
+ */
+void app_lora_enter_sleep_mode(void);
 
 // LoRa 协议处理接口================================
-/**
- * @brief LoRa 协议处理接口
- * @note 包含心跳、信号、功率帧的发送以及模块周期处理函数
- */
-void app_lora_heartbeat(void);
-
 /**
  * @brief 发送信号帧，lora 自定义协议比较简单，只有触点信号帧和电量帧
  * 

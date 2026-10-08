@@ -32,6 +32,8 @@
 #endif
 
 static uint8_t for_debug_time = 0;
+static app_status_t app_status = STATE_IDLE;
+static uint8_t matched_state = 0U;
 
 /*==============================================================================
  * 内部函数
@@ -129,7 +131,8 @@ static uint8_t app_sig_state_read(void)
 
 void app_init(void)
 {
-    dbg_printf("\r\n==== %s boot (FW %s) ====\r\n", APP_DEVICE_NAME, APP_FW_VERSION);
+    app_status = STATE_IDLE;
+    matched_state = 1U;
 
     /* 驱动层初始化顺序:
      * 1) 串口驱动(需要 CubeMX 已 MX_xxx_Init)
@@ -147,12 +150,12 @@ void app_init(void)
 
     // LORA 参数配置
     lora_reg_parm_cfg_t lora_cfg = {
-        .detail.addr_high = 0x00,
-        .detail.addr_low = 0x01,
+        .detail.addr_high = (uint8_t)((APP_DEVICE_ADDR >> 8) & 0xFFU),
+        .detail.addr_low = (uint8_t)(APP_DEVICE_ADDR & 0xFFU),
         .detail.sped.bits.air_rate = AIR_2_4K,
         .detail.sped.bits.ttl_rate = BAUD_9600,
         .detail.sped.bits.parity = PARITY_8N1,
-        .detail.channel = 0x00,   /* 根据实际情况初始化 */
+        .detail.channel = APP_LORA_FREQ_CH,   /* 根据实际情况初始化 */
         .detail.option.bits.power = TX_POWER_20DBM,
         .detail.option.bits.fec = FEC_DISABLE,
         .detail.option.bits.wakeup_time = WAKEUP_250MS,
@@ -160,7 +163,7 @@ void app_init(void)
         .detail.option.bits.fixed_point_trans = FIXED_POINT_TRANS_DISABLE,
     };
 
-    if(app_lora_cfg_reg_verify(lora_cfg, sizeof(lora_cfg.data)))
+    if(app_lora_cfg_reg_verify(lora_cfg))
     {
         dbg_printf("LoRa configuration verified successfully.\r\n");
     }
@@ -168,6 +171,8 @@ void app_init(void)
     {
         dbg_printf("LoRa configuration verification failed.\r\n");
     }
+
+    dbg_printf("\r\n==== %s boot (FW %s) ====\r\n", APP_DEVICE_NAME, APP_FW_VERSION);
 
 #if (APP_DEBUG_ENABLE == 1)
     /* 电池电压自检:上电测一次并打印(正式上报可放在 app_task 里按需调用) */
@@ -218,44 +223,71 @@ void app_task(void)
     uint32_t wake;
     uint8_t sig_state = 0U;
 
-    /* 0) 先快照并清掉唤醒事件位图(EXTI 中断里置位,这里消费掉) */
-    wake = bsp_gpio_get_wake_events();
-    bsp_gpio_clear_wake_events();
-
-    /* 1) 任一路信号出现跳变(EXTI 唤醒位)=> 三路信号全部重新消抖读取,
-     *    拼成一个状态字一次性上报:主机看到的是同一时刻的三相快照 */
-    if (wake != 0U)
+    switch(app_status)
     {
-        sig_state = app_sig_state_read();
+    case STATE_IDLE:
 
-#if (APP_LORA_AUX_VERIFY_ENABLE == 1)
-        /* 验证阶段:用带 AUX 空口确认的发送,顺便打印是否真的发到空中 */
-        (void)app_lora_signal_verify(sig_state);
-#else
-        app_lora_signal(sig_state);     /* 上报信号帧(数据域 = 三相状态字) */
-#endif
-        dbg_printf("App lora signal: state=0x%02X\r\n", (unsigned int)sig_state);
-    }
-    /* 电池电压监测:每轮循环都测一次 */
-    // debug_gpio_signal[0] = bsp_gpio_sig_level((bsp_sig_ch_t)BSP_SIG_CH0);
-    // debug_gpio_signal[1] = bsp_gpio_sig_level((bsp_sig_ch_t)BSP_SIG_CH1);
-    // debug_gpio_signal[2] = bsp_gpio_sig_level((bsp_sig_ch_t)BSP_SIG_CH2);
-    /* 2) LoRa 主动处理(被动唤醒已取消:AUX 不再是唤醒源) */
-    app_lora_process();
+    {
+        /* 如果尚未匹配,则进入配对状态 */
+        if(matched_state == 0U)
+        {
+            app_status = STATE_MATCHING;
+        }
+        /* 上电后前 APP_BOOT_KEEP_RUN_MS 毫秒保持运行(不睡),
+         * 方便调试器连接 / 按复位追赶;窗口结束之后才进入 Stop。 */
+        if (HAL_GetTick() < (uint32_t)APP_BOOT_KEEP_RUN_MS && for_debug_time == 0)
+        {
+            HAL_Delay(5U);              /* 短暂延时,期间照常响应命令 */
+            for_debug_time = 1;
+            dbg_printf("Boot keep run time elapsed, entering low power soon.\r\n");
+            app_status = STATE_RUNNING;
+        }
+        /* 空闲状态下的处理逻辑 */
+    }break;
 
-    /* 3) 没有任务可做 -> 进入低功耗(Stop)等下一次信号 EXTI */
-#if (APP_LOWPOWER_ENABLE == 1)
-    /* 上电后前 APP_BOOT_KEEP_RUN_MS 毫秒保持运行(不睡),
-     * 方便调试器连接 / 按复位追赶;窗口结束之后才进入 Stop。 */
-    if (HAL_GetTick() < (uint32_t)APP_BOOT_KEEP_RUN_MS && for_debug_time == 0)
+    case STATE_MATCHING:
+
     {
-        HAL_Delay(5U);              /* 短暂延时,期间照常喂狗/响应命令 */
-        for_debug_time = 1;
-    }
-    else
+        /* 配对状态下的处理逻辑 */
+    }break;
+
+    case STATE_RUNNING:
+
     {
-/* 电池电压监测:每轮循环都测一次 */
-#if (APP_DEBUG_ENABLE == 1)
+        /* 运行状态下的处理逻辑 */
+        /**
+         * LoRa通信
+         * 发送
+         * 等待ACK并确认
+         * 重试机制
+         * 超时处理
+         */
+
+        /* 0) 先快照并清掉唤醒事件位图(EXTI 中断里置位,这里消费掉) */
+        wake = bsp_gpio_get_wake_events();
+        bsp_gpio_clear_wake_events();
+
+        /* 1) 任一路信号出现跳变(EXTI 唤醒位)=> 三路信号全部重新消抖读取,
+        *    拼成一个状态字一次性上报:主机看到的是同一时刻的三相快照 */
+        if (wake != 0U)
+        {
+            sig_state = app_sig_state_read();
+
+            /* 如果信号状态为 0 表示挂接完成, 则上报 */
+            if(sig_state == 0U)
+            {
+                app_lora_signal((uint8_t)APP_SIG_HOOKED_OK);     /* 上报信号帧(数据域 = 三相状态字) */
+                dbg_printf("App lora signal: state=0x%02X\r\n", (unsigned int)sig_state);
+            }
+
+            else
+            {
+                app_lora_signal((uint8_t)APP_SIG_HOOKED_FAIL);     /* 上报信号帧(数据域 = 三相状态字) */
+                dbg_printf("App lora signal: state=0x%02X\r\n", (unsigned int)sig_state);
+            }
+        }
+
+        /* 电池电压监测:每轮循环都测一次 */
         {
             uint32_t bat_mv = 0U;
 
@@ -265,23 +297,37 @@ void app_task(void)
                         (unsigned int)bat_mv,
                         (unsigned int)bsp_adc_pwr_percent(bat_mv),
                         bsp_adc_pwr_is_low(bat_mv) ? "LOW" : "OK");
-#if (APP_LORA_AUX_VERIFY_ENABLE == 1)
-                /* 验证阶段:用带 AUX 空口确认的发送 */
-                (void)app_lora_power_verify((uint8_t)bsp_adc_pwr_percent(bat_mv));
-#else
                 app_lora_power((uint8_t)bsp_adc_pwr_percent(bat_mv));
-#endif
             }
         }
-#endif
+
+        /* Wait ACK from the host + retry mechanism */
+
+
+#if (APP_LOWPOWER_ENABLE == 1)
         dbg_printf("Entering low power (Stop) mode.\r\n");
         bsp_power_enter_stop();     /* 正常低功耗(阻塞,直到被唤醒) */
-    }
+        dbg_printf("Exited low power (Stop) mode.\r\n");
 #else
     HAL_Delay(250U);                /* 调试:不进低功耗,一直运行 */
-#endif
+#endif 
+    } break;
 
-    /* 唤醒后回到循环顶部:喂狗、处理事件、再休眠 */
+    case STATE_ERROR:
+
+    {
+        /* 错误状态下的处理逻辑 */
+    }break;
+
+    default:
+
+        break;
+
+    }
+
+    app_lora_process();
+
+    /* 唤醒后回到循环顶部:处理事件、再休眠 */
 }
 
 

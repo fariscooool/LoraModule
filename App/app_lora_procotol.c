@@ -19,46 +19,20 @@
 #include "app_lora_procotol.h"
 #include "main.h"
 
-/* 自定义帧格式(收发一致,与现有发送函数保持一致):
- *   [0]      0x5A
- *   [1]      LEN  = 整帧字节数(含帧头与 CRC)
- *   [2]      FUN  功能码
- *   [3..]    DATA 数据域,长度 = LEN - 4
- *   [LEN-1]  CRC8 (对 [0..LEN-2] 计算,多项式 0x07)
- * 举例:心跳帧 0x5A 0x04 0x00 0xF7
- */
-#define LORA_FRAME_HEAD     0x5A
-#define LORA_FRAME_MIN_LEN  4U      /* 头+长度+FUN+CRC(数据域为空) */
-#define LORA_FRAME_DATA_MAX 12U     /* 数据域上限 */
-#define LORA_FRAME_BUF_MAX  (LORA_FRAME_MIN_LEN + LORA_FRAME_DATA_MAX)
-#define LORA_FRAME_GAP_MS   50U     /* 字节间超时:超时则丢弃半帧 */
+/*==============================================================================
+ * 三、上报帧协议以及相关参数
+ * [0] 0x5A
+ * [1] 从机地址
+ * [2] LEN  = 整帧字节数(含帧头与 CRC)
+ * [3] FUN  功能码
+ * [4] 帧长 基本固定，暂时数据帧长固定为6Byte，具体长度取决于数据域的长度。
+ * [5...LEN-2] 数据域
+ * [LEN-1] CRC8 (对 [0..LEN-2] 计算,多项式 0x07)
+ * 总长暂时使用的都为为 6 字节。
+ *============================================================================*/
 
-/* 上行(设备 -> 主机)功能码 */
-#define LORA_FUN_HEARTBEAT 0x00     // 心跳帧
-#define LORA_FUN_SIGNAL 0x01        // 信号帧，主要是ABC相开关状态
-#define LORA_FUN_POWER 0x02         // 电池电量帧
-
-/* 下行(主机 -> 设备)功能码:控制参数 */
-#define LORA_FUN_GET_POWER   0x10U  /* 数据 0B:获取电池电量*/
-#define LORA_FUN_GET_SIGNAL   0x11U  /* 数据 1B:主动获取ABC相开关状态*/
-// #define LORA_FUN_SET_ADDR     0x12U  /* 数据 2B:模块地址(小端,掉电保存)  */
-// #define LORA_FUN_SET_CHANNEL  0x13U  /* 数据 1B:模块信道(掉电保存)       */
-// #define LORA_FUN_QUERY_CFG    0x14U  /* 数据 0B:请求回读当前配置         */
-
-#define LORA_CFG_CMD_WRITE  0xC0U   /* 写寄存器(掉电保存);临时写可改 0xC2 */
-#define LORA_CFG_CMD_READ   0xC1U   /* 读参数 */
-
-#define LORA_CFG_SWITCH_MS  20U     /* 模式切换后等待模块稳定(ms) */
-#define LORA_CFG_READY_MS   100U    /* 等 AUX 就绪的超时(ms) */
-#define LORA_CFG_REPLY_MS   300U    /* 等配置回包的超时(ms) */
-
-/* 单次配置读/写的最大数据字节数 */
-#define APP_LORA_CFG_DATA_MAX   5U
-
-/* 心跳帧内容(固定 4 字节:0x5A 0x04 0x00 0xF7) */
-static const uint8_t lora_hb_frame[4] = { 0x5A, 0x04, 0x00, 0xF7 };
-static uint8_t lora_sig_frame[5] = { LORA_FRAME_HEAD, 0x05, LORA_FUN_SIGNAL, 0x00, 0xF7 };
-static uint8_t lora_power_frame[5] = { LORA_FRAME_HEAD, 0x05, LORA_FUN_POWER, 0x00, 0xF7 };
+static uint8_t lora_sig_frame[6] = { LORA_FRAME_HEAD, APP_DEVICE_ADDR, 0x06, LORA_FUN_SIGNAL, 0x00, 0xF7 };
+static uint8_t lora_power_frame[6] = { LORA_FRAME_HEAD, APP_DEVICE_ADDR, 0x06, LORA_FUN_POWER, 0x00, 0xF7 };
 
 static uint8_t *signal_status = NULL; // ABC相开关状态
 static uint8_t *power_status = NULL; // 电池电量
@@ -160,26 +134,26 @@ static uint8_t lora_cfg_transaction(const uint8_t *tx, uint8_t tx_len,
     return (got == rx_len) ? 1U : 0U;
 }
 
-uint8_t app_lora_cfg_write(const lora_reg_parm_cfg_t cfg, uint8_t len)
+void app_lora_enter_sleep_mode(void)
+{
+    lora_cfg_mode_enter();
+}
+
+uint8_t app_lora_cfg_write(const lora_reg_parm_cfg_t cfg)
 {
     uint8_t tx[1U + APP_LORA_CFG_DATA_MAX];
     uint8_t ok = 0U;
     uint8_t i;
 
-    if ((len == 0U) || (len > APP_LORA_CFG_DATA_MAX))
-    {
-        return 0U;
-    }
-
     tx[0] = LORA_CFG_CMD_WRITE;
 
-    for (i = 0U; i < len; i++)
+    for (i = 0U; i < APP_LORA_CFG_DATA_MAX; i++)
     {
         tx[1U + i] = cfg.data[i];
     }
 
     lora_cfg_mode_enter();
-    if (lora_cfg_transaction(tx, (uint8_t)(1U + len), NULL, 0) != 0U)
+    if (lora_cfg_transaction(tx, (uint8_t)(1U + APP_LORA_CFG_DATA_MAX), NULL, 0) != 0U)
     {
         ok = 1U;
     }
@@ -189,14 +163,14 @@ uint8_t app_lora_cfg_write(const lora_reg_parm_cfg_t cfg, uint8_t len)
 }
 
 
-uint8_t app_lora_cfg_read(lora_reg_parm_cfg_t *buf, uint8_t len)
+uint8_t app_lora_cfg_read(lora_reg_parm_cfg_t *buf)
 {
     uint8_t tx[3U];
-    uint8_t rx[APP_LORA_CFG_DATA_MAX];
+    uint8_t rx[APP_LORA_CFG_DATA_MAX + 1]; //返回C0 + 数据域(5Byte)
     uint8_t ok = 0U;
     uint8_t i;
 
-    if ((buf == NULL) || (len == 0U) || (len > APP_LORA_CFG_DATA_MAX))
+    if (buf == NULL)
     {
         return 0U;
     }
@@ -206,11 +180,13 @@ uint8_t app_lora_cfg_read(lora_reg_parm_cfg_t *buf, uint8_t len)
     tx[2] = LORA_CFG_CMD_READ;
 
     lora_cfg_mode_enter();
+
+    // 虽然用DMA，但是实际接口为阻塞发送，因此tx为局部变量是安全的，但最好用静态变量以防止未来接口修改为非阻塞模式
     if (lora_cfg_transaction(tx, 3U, rx, (uint8_t)(sizeof(rx))) != 0U)
     {
-        for (i = 0U; i < len; i++)
+        for (i = 0U; i < APP_LORA_CFG_DATA_MAX; i++)
         {
-            buf->data[i] = rx[i];
+            buf->data[i] = rx[i + 1];
         }
         ok = 1U;
     }
@@ -223,37 +199,33 @@ uint8_t app_lora_cfg_read(lora_reg_parm_cfg_t *buf, uint8_t len)
  * @brief 一次配置模式下完成 "写 + 读回" 并比对
  * @retval 1=写回显与读回都一致 0=失败
  */
-static uint8_t lora_cfg_write_read_verify(const lora_reg_parm_cfg_t val, uint8_t len)
+static uint8_t lora_cfg_write_read_verify(const lora_reg_parm_cfg_t val)
 {
     uint8_t tx[1U + APP_LORA_CFG_DATA_MAX];
-    uint8_t rx[APP_LORA_CFG_DATA_MAX];
+    lora_reg_parm_cfg_t rx;
     uint8_t ok = 0U;
     uint8_t i;
-
-    if (len != 5U)
-    {
-        return 0U;
-    }
 
     lora_cfg_mode_enter();
 
     /* 1) 写:模块应原样回显 */
     tx[0] = LORA_CFG_CMD_WRITE;
-    for (i = 0U; i < len; i++)
+    for (i = 0U; i < APP_LORA_CFG_DATA_MAX; i++)
     {
         tx[1U + i] = val.data[i];
     }
-    if (lora_cfg_transaction(tx, (uint8_t)(1U + len), NULL, 0) != 0U)
+    // 虽然用DMA，但是实际接口为阻塞发送，因此tx为局部变量是安全的，但最好用静态变量以防止未来接口修改为非阻塞模式
+    if (lora_cfg_transaction(tx, (uint8_t)(1U + APP_LORA_CFG_DATA_MAX), NULL, 0) != 0U)
     {
         ok = 1U;
     }
 
     /* 2) 读回数据,解析后与期望值逐个比对 */
-    if(app_lora_cfg_read((lora_reg_parm_cfg_t *)&rx, (uint8_t)sizeof(rx)) != 0U)
+    if(app_lora_cfg_read(&rx) != 0U)
     {
-        for (i = 0U; i < len; i++)
+        for (i = 0U; i < APP_LORA_CFG_DATA_MAX; i++)
         {
-            if (rx[i] != val.data[i])
+            if (rx.data[i] != val.data[i])
             {
                 ok = 0U;
                 break;
@@ -266,9 +238,9 @@ static uint8_t lora_cfg_write_read_verify(const lora_reg_parm_cfg_t val, uint8_t
     return ok;
 }
 
-uint8_t app_lora_cfg_reg_verify(lora_reg_parm_cfg_t val, uint8_t len)
+uint8_t app_lora_cfg_reg_verify(lora_reg_parm_cfg_t val)
 {
-    return lora_cfg_write_read_verify(val, len);
+    return lora_cfg_write_read_verify(val);
 }
 
 
@@ -276,23 +248,12 @@ uint8_t app_lora_cfg_reg_verify(lora_reg_parm_cfg_t val, uint8_t len)
  * 二、主机自定义通信发送以及解析
  * 逐字节收包 -> 收满整帧 -> CRC8 校验 -> 功能码 switch 落地
  *********************************/
-
-// 主机自定义通信发送接口，包含心跳、信号和电池电压
-void app_lora_heartbeat(void)
-{
-    
-    if(app_lora_get_status() == LORA_IDLE)
-    {
-        app_lora_send_bytes(lora_hb_frame, (uint16_t)sizeof(lora_hb_frame));
-    }
-}
-
 void app_lora_signal(uint8_t sig)
 {
     if(app_lora_get_status() == LORA_IDLE)
     {
-        lora_sig_frame[3] = sig;
-        lora_sig_frame[4] = lora_crc8_cal(lora_sig_frame, 4);
+        lora_sig_frame[4] = sig;
+        lora_sig_frame[5] = lora_crc8_cal(lora_sig_frame, 5);
         app_lora_send_bytes(lora_sig_frame, (uint16_t)sizeof(lora_sig_frame));
     }
 }
@@ -301,8 +262,8 @@ void app_lora_power(uint8_t power)
 {
     if(app_lora_get_status() == LORA_IDLE)
     {
-        lora_power_frame[3] = power;
-        lora_power_frame[4] = lora_crc8_cal(lora_power_frame, 4);
+        lora_power_frame[4] = power;
+        lora_power_frame[5] = lora_crc8_cal(lora_power_frame, 5);
         app_lora_send_bytes(lora_power_frame, (uint16_t)sizeof(lora_power_frame));
     }
 }

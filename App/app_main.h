@@ -3,6 +3,14 @@
 
 #include "bsp_gpio.h"   /* bsp_sig_ch_t 等类型 */
 
+typedef enum 
+{
+    STATE_IDLE,
+    STATE_MATCHING,
+    STATE_RUNNING,
+    STATE_ERROR
+}app_status_t;
+
 #ifdef __cplusplus
 extern "C" {
 #endif

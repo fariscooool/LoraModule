@@ -51,7 +51,6 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     App/app_main.c
     App/app_lora.c
     App/app_lora_procotol.c
-    App/app_lora_net.c
 
     # 驱动层(Bsp)
     Bsp/bsp_dbg_uart.c
