@@ -23,22 +23,13 @@ typedef struct
 
 
 
-// LoRa 协议处理接口================================
-/**
- * @brief 发送信号帧，lora 自定义协议比较简单，只有触点信号帧和电量帧
- * 
- * @param sig 
- */
-void app_lora_signal(uint8_t sig);
+/* ================ 上报交付事务(一帧快照 + ACK 确认/重发) ================ */
 
 /**
- * @brief 发送功率帧
- * 
- * @param power 0~100 表示电池电量百分比
+ * @brief 设备唯一标识短码(96bit UID 经 FNV-1a 派生的 32bit)
+ * @note  首次调用时读取 HAL_GetUIDw0/1/2 并缓存;随每帧下发,主机据此建白名单过滤
  */
-void app_lora_power(uint8_t power);
-
-/* ================ 上报交付事务(两帧连发 + 单窗口双 ACK + 缺帧重发) ================ */
+uint32_t app_lora_uid32(void);
 
 /**
  * @brief 上行交付统计(调试/现场诊断用)
@@ -46,22 +37,22 @@ void app_lora_power(uint8_t power);
  */
 typedef struct
 {
-    uint16_t round_ok;    /* 完整交付(两帧都确认)的轮次数 */
-    uint16_t sig_fail;    /* 信号帧重试耗尽/被主机拒绝次数 */
-    uint16_t pwr_fail;    /* 电量帧重试耗尽/被主机拒绝次数 */
-    uint16_t retry_cnt;   /* 累计重发帧次数 */
+    uint16_t round_ok;    /* 确认成功的轮次数 */
+    uint16_t round_fail;  /* 重试用尽仍未确认的轮次数 */
+    uint16_t rejected;    /* 被主机拒收(ACK CODE≠0)的次数 */
+    uint16_t retry_cnt;   /* 累计重发次数 */
 } app_lora_uplink_stats_t;
 
 /**
- * @brief 提交一轮上报(信号+电量)
+ * @brief 提交一轮上报(信号+电量,合并为一帧 0x03 快照帧)
  * @param sig   信号数据域(如 APP_SIG_HOOKED_OK / APP_SIG_HOOKED_FAIL)
  * @param power 电量 0~100;0xFF=无效
  * @note  非阻塞。
- *        APP_LORA_ACK_ENABLE=1:后台事务负责两帧连发、单窗口等双 ACK、缺帧重发、
- *          超时重试;两帧都确认(或重试用尽)前 busy() 保持 1;事务进行中再次调用:
+ *        APP_LORA_ACK_ENABLE=1:后台事务负责发送快照帧、等 ACK、超时重发(换新 SEQ);
+ *          确认成功(或重试用尽)前 busy() 保持 1;事务进行中再次调用:
  *          数据记为"最新快照",本轮结束后自动补发一轮。
- *        APP_LORA_ACK_ENABLE=0(简化版):两帧背靠背发出即返回,不等 ACK、
- *          不重发、不合并,下一次调用立即再发一轮。
+ *        APP_LORA_ACK_ENABLE=0(简化版):快照帧发出即返回,不等 ACK、
+ *          不重发,下一次调用立即再发一轮。
  */
 void app_lora_uplink_status(uint8_t sig, uint8_t power);
 

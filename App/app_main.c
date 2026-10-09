@@ -94,7 +94,7 @@ static uint8_t app_sig_debounce(bsp_sig_ch_t ch, bsp_gpio_level_t *level)
 /**
  * @brief 读取三路信号的当前状态:每路都先消抖,再拼成一个状态字
  *
- *        状态字位定义(与 LORA_FUN_SIGNAL 帧的数据字节一致):
+ *        状态字位定义(消抖读数;是否全低由 app_task 换算成 0xAA/0x55 后再随快照帧上报):
  *          bit0 = CH0(PB0)   bit1 = CH1(PB1)   bit2 = CH2(PB3)
  *          位值 = 该路电平:1 = 高电平(无信号),0 = 低电平(有信号)
  *        如果你的协议约定 bit=1 表示"触点闭合(低电平)",把下面的
@@ -174,6 +174,10 @@ void app_init(void)
     }
 
     dbg_printf("\r\n==== %s boot (FW %s) ====\r\n", APP_DEVICE_NAME, APP_FW_VERSION);
+
+    /* 设备唯一标识短码:主机用它建立"本套设备白名单"(随每帧下发) */
+    dbg_printf("Device UID32: 0x%08lX (addr 0x%02X)\r\n",
+               (unsigned long)app_lora_uid32(), (unsigned int)APP_DEVICE_ADDR);
 
     /* 电池电压 ADC:上报帧要带电量,正式版也必须初始化(不是调试专属) */
     if (bsp_adc_pwr_init() != BSP_ADC_PWR_OK)
