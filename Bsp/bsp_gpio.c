@@ -132,12 +132,9 @@ void bsp_gpio_register_exti_callback(bsp_sig_ch_t ch, bsp_gpio_exti_callback_t c
 
 uint32_t bsp_gpio_get_wake_events(void)
 {
-    return s_wake_events;
-}
-
-void bsp_gpio_clear_wake_events(void)
-{
-    s_wake_events = 0U;
+    uint32_t tmp = s_wake_events;
+    s_wake_events = 0;
+    return tmp;
 }
 
 /*==============================================================================

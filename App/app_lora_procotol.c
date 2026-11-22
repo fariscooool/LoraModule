@@ -98,10 +98,6 @@ uint32_t app_lora_uid32(void)
 /*********************************
  * 二、上行交付事务(一帧快照 + ACK 确认 + 超时重发)
  *
- * 注:本章节行为由 app_config.h 的 APP_LORA_ACK_ENABLE 控制。
- *     =0(简化版,当前交付):快照帧发出即结束,不等 ACK/不重发/不占事务;
- *     =1(完整版):下述状态机全流程生效。代码始终保留,仅编译期裁剪。
- *
  * 一轮上报 = 1 帧状态快照(0x03:信号+电量+UID32+SEQ);
  * 主机回 ACK(FUN=0x83,CORR=被确认的 SEQ,CODE=0 为成功);
  *   - 窗口内收到  -> 本轮交付成功
@@ -159,23 +155,7 @@ static void uplink_send_snapshot(uint8_t seq, uint8_t sig, uint8_t pwr)
     app_lora_send_bytes(tx, (uint16_t)sizeof(tx));
 }
 
-#if (APP_LORA_ACK_ENABLE == 0)
-/* 简化版:一轮 = 一帧快照,发出即结束(不等 ACK、不重发、不占事务) */
-static void uplink_send_round_now(uint8_t sig, uint8_t power)
-{
-    s_uplink.round_sig = sig;
-    s_uplink.round_pwr = power;
-    s_uplink.state     = UPLINK_IDLE;       /* 不占事务:发完即空闲,可进 Stop */
 
-    s_uplink.seq = s_uplink.seq_next++;
-    uplink_send_snapshot(s_uplink.seq, sig, power);
-
-    dbg_printf("[UPLINK] tx STATUS seq=%u sig=0x%02X pwr=%u (ACK disabled)\r\n",
-               (unsigned int)s_uplink.seq, (unsigned int)sig, (unsigned int)power);
-}
-#endif
-
-#if (APP_LORA_ACK_ENABLE == 1)
 /* 开始一轮:快照待发,重试额度重置 */
 static void uplink_begin_round(uint8_t sig, uint8_t power)
 {
@@ -300,16 +280,14 @@ static void uplink_poll(void)
         break;
     }
 }
-#endif /* APP_LORA_ACK_ENABLE == 1:完整交付状态机 */
 
 /* ---- 对外接口 ---- */
-
 void app_lora_uplink_status(uint8_t sig, uint8_t power)
 {
     s_uplink.last_sig = sig;
     s_uplink.last_pwr = power;
 
-#if (APP_LORA_ACK_ENABLE == 1)
+
     if (s_uplink.state == UPLINK_IDLE)
     {
         uplink_begin_round(sig, power);
@@ -327,19 +305,12 @@ void app_lora_uplink_status(uint8_t sig, uint8_t power)
         s_uplink.latest_pwr = power;
         s_uplink.reshoot = 1U;
     }
-#else
-    /* 简化版:不关心事务状态,来一次就立即把快照送出去(不等确认) */
-    uplink_send_round_now(sig, power);
-#endif
 }
 
 uint8_t app_lora_uplink_busy(void)
 {
-#if (APP_LORA_ACK_ENABLE == 1)
     return (s_uplink.state != UPLINK_IDLE) ? 1U : 0U;
-#else
-    return 0U;          /* 简化版:帧已发完,允许立刻进 Stop */
-#endif
+
 }
 
 void app_lora_uplink_get_stats(app_lora_uplink_stats_t *out)
@@ -354,15 +325,6 @@ void app_lora_uplink_get_stats(app_lora_uplink_stats_t *out)
  * 三、主机自定义通信发送以及解析(点名应答 + 收包状态机)
  * 逐字节收包 -> 收满整帧 -> CRC8 校验 -> ACK 匹配 / 功能码 switch 落地
  *********************************/
-void app_lora_set_signal(uint8_t *signal)
-{
-    signal_status = signal;
-}
-
-void app_lora_set_power(uint8_t *power)
-{
-    power_status = power;
-}
 
 /* 取小端 32bit */
 static uint32_t lora_u32_le(const uint8_t *p)
@@ -397,7 +359,7 @@ static void lora_rx_parse(const uint8_t *f, uint8_t len)
      * ACK 必须精确指向本机(地址+UID32 都对):广播 ACK 一律忽略。 */
     if ((fun & LORA_FRAME_ACK_BIT) != 0U)
     {
-#if (APP_LORA_ACK_ENABLE == 1)
+
         if ((directed != 0U) && (len >= LORA_FRAME_ACK_LEN))
         {
             uplink_ack_rx((uint8_t)(fun & (uint8_t)~LORA_FRAME_ACK_BIT), f[8], f[9]);
@@ -408,10 +370,6 @@ static void lora_rx_parse(const uint8_t *f, uint8_t len)
                        (unsigned int)directed, (unsigned int)len,
                        (unsigned int)LORA_FRAME_ACK_LEN);
         }
-#else
-        /* 简化版:主机仍会回 ACK,这里一律忽略(帧格式不变,只是不等确认) */
-        dbg_printf("[LORA RX] ack ignored (APP_LORA_ACK_ENABLE=0)\r\n");
-#endif
         return;
     }
 
@@ -546,8 +504,5 @@ void app_lora_process(void)
         s_rx_idx = 0U;
     }
 
-    /* 3) 推进上行交付事务(退避 -> 发送 -> 等ACK -> 重发/收尾) */
-#if (APP_LORA_ACK_ENABLE == 1)
     uplink_poll();
-#endif
 }

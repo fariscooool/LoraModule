@@ -37,6 +37,12 @@ uint8_t app_lora_cfg_reg_verify(lora_reg_parm_cfg_t val);
  */
 void app_lora_enter_sleep_mode(void);
 
+/**
+ * @brief 让Lora进入正常的发送和接收模式，发送数据。
+ * 
+ */
+void app_lora_enter_normal_mode(void);
+
 
 #ifdef __cplusplus
 }

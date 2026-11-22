@@ -94,6 +94,11 @@ void app_lora_enter_sleep_mode(void)
     lora_cfg_mode_enter();
 }
 
+void app_lora_enter_normal_mode(void)
+{
+    lora_cfg_mode_exit();
+}
+
 uint8_t app_lora_cfg_write(const lora_reg_parm_cfg_t cfg)
 {
     uint8_t tx[1U + APP_LORA_CFG_DATA_MAX];

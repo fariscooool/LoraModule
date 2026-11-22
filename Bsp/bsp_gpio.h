@@ -88,14 +88,10 @@ void bsp_gpio_register_exti_callback(bsp_sig_ch_t ch, bsp_gpio_exti_callback_t c
 
 /**
  * @brief 获取“从低功耗唤醒”时触发过的信号位图(bit0=CH0,bit1=CH1,bit2=CH2)
- * @note  由 EXTI 中断里置位,应用层处理后可用 bsp_gpio_clear_wake_events() 清掉
+ * @note  由 EXTI 中断里置位。
  */
 uint32_t bsp_gpio_get_wake_events(void);
 
-/**
- * @brief 清除唤醒事件位图
- */
-void bsp_gpio_clear_wake_events(void);
 
 #ifdef __cplusplus
 }

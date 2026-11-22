@@ -217,6 +217,8 @@ void app_init(void)
 #else
     dbg_printf("Init done, LOW POWER DISABLED (debug).\r\n");
 #endif
+
+    app_lora_enter_normal_mode();
 }
 
 void app_deinit(void)
@@ -263,13 +265,11 @@ void app_task(void)
     {
         /* 运行状态下的处理逻辑:
          * 事件 -> 读三相状态 + 测电量 -> 提交一轮上报(信号帧+电量帧);
-         * 方案B2:两帧连发,一个窗口收双 ACK,缺帧重发;
          * 发送/等ACK/重试/超时由上行事务在 app_lora_process() 里推进;
          * 两帧都确认(或重试用尽)之前不进 Stop。 */
 
         /* 0) 先快照并清掉唤醒事件位图(EXTI 中断里置位,这里消费掉) */
         wake = bsp_gpio_get_wake_events();
-        bsp_gpio_clear_wake_events();
 
         /* 1) 任一路信号出现跳变(EXTI 唤醒位)=> 三路信号全部重新消抖读取:
         *    全部为低(状态字=0)表示挂接完成 -> 0xAA,否则 0x55;
@@ -311,10 +311,13 @@ void app_task(void)
         }
         else
         {
+            app_lora_enter_sleep_mode();
             dbg_printf("Entering low power (Stop) mode.\r\n");
             bsp_power_enter_stop();     /* 正常低功耗(阻塞,直到被唤醒) */
             dbg_printf("Exited low power (Stop) mode.\r\n");
+            app_lora_enter_normal_mode();
         }
+        HAL_Delay(250U);                /* 调试:不进低功耗,一直运行 */
 #else
     HAL_Delay(250U);                /* 调试:不进低功耗,一直运行 */
 #endif 

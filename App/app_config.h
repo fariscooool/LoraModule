@@ -105,11 +105,6 @@
 
 #define LORA_ACK_CODE_OK    0x00U   /* 0=主机已正确接收;非 0 均为失败(主机侧定义) */
 
-/* 上行交付模式总开关(ACK/重试/退避相关代码全部保留,只做编译期裁剪):
- *   1 = 完整交付:一帧快照 + 等 ACK + 超时重发 + 退避(见 Docs/LoRa_Protocol_v1.6.md §6)
- *   0 = 简化版(样机):快照帧发出即结束 —— 不等 ACK、不重发、不占事务,
- *       发完可立即进 Stop;主机仍按协议回 ACK,设备直接忽略,空口帧格式完全不变 */
-#define APP_LORA_ACK_ENABLE       1
 
 #define APP_LORA_ACK_TIMEOUT_MS   300U  /* 等 ACK 窗口(ms);空速 0.3k 时需加大 */
 #define APP_LORA_RETRY_MAX        2U    /* 每帧最多重发次数(每帧总发送 1+N 次) */
@@ -191,8 +186,8 @@
 /* 电量百分比映射区间与低压告警阈值 mV
  * !! 占位值(按 2.0V ~ 3.0V 电池组),请按实际电池规格修改 !!
  *    注:若 VDD 就是电池电压本身,Vbat 会等于 VDDA,阈值需按实际电池组设置 */
-#define BSP_ADC_PWR_BAT_EMPTY_MV 2000U
-#define BSP_ADC_PWR_BAT_FULL_MV  3000U
-#define BSP_ADC_PWR_LOW_MV       2200U
+#define BSP_ADC_PWR_BAT_EMPTY_MV 3700U
+#define BSP_ADC_PWR_BAT_FULL_MV  4200U
+#define BSP_ADC_PWR_LOW_MV       3800U
 
 #endif /* APP_CONFIG_H */

@@ -46,10 +46,10 @@ extern "C" {
 
 /** 分压比:Vbat = Vadc * NUM / DEN */
 #ifndef BSP_ADC_PWR_DIV_NUM
-#define BSP_ADC_PWR_DIV_NUM     2U
+#define BSP_ADC_PWR_DIV_NUM     3U
 #endif
 #ifndef BSP_ADC_PWR_DIV_DEN
-#define BSP_ADC_PWR_DIV_DEN     1U
+#define BSP_ADC_PWR_DIV_DEN     2U
 #endif
 
 /** 参考电压标称值(mV),即 VDDA。
@@ -82,15 +82,15 @@ extern "C" {
 /** 电量百分比映射区间(mV):Vbat <= EMPTY -> 0%,Vbat >= FULL -> 100%
  *  !! 占位值(按 2.0V ~ 3.0V 电池组),请按实际电池修改 !! */
 #ifndef BSP_ADC_PWR_BAT_EMPTY_MV
-#define BSP_ADC_PWR_BAT_EMPTY_MV  2000U
+#define BSP_ADC_PWR_BAT_EMPTY_MV  3700U
 #endif
 #ifndef BSP_ADC_PWR_BAT_FULL_MV
-#define BSP_ADC_PWR_BAT_FULL_MV   3000U
+#define BSP_ADC_PWR_BAT_FULL_MV   4200U
 #endif
 
 /** 低压告警阈值(mV) */
 #ifndef BSP_ADC_PWR_LOW_MV
-#define BSP_ADC_PWR_LOW_MV       2200U
+#define BSP_ADC_PWR_LOW_MV       3800U
 #endif
 
 /*==============================================================================
